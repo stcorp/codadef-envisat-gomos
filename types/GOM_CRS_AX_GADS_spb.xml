@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CRS_AX_GADS_spb" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="cross_summary">
+    <cd:Array format="ascii">
+      <cd:Description>cross-sections summary description (SPB). 20 lines of 128 characters are available to describe the origin and characteristics of the cross-sections.</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>128</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_points">
+    <cd:Integer>
+      <cd:Description>Number of points in the spectral grid</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_grid">
+    <cd:Array>
+      <cd:Description>Spectral grid</cd:Description>
+      <cd:Dimension>500</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>nm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

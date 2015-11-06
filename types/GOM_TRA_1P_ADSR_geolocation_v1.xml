@@ -1,0 +1,349 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_ADSR_geolocation_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (set to 1 if there are no Transmission MDSRs or SATU MDSRs corresponding to this ADSR, set to zero otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Array>
+      <cd:Description>Latitude of the spacecraft. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="longit">
+    <cd:Array>
+      <cd:Description>Longitude of the spacecraft. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="alt">
+    <cd:Array>
+      <cd:Description>Altitude of the spacecraft. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tangent_lat">
+    <cd:Array>
+      <cd:Description>Latitude of the tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tangent_long">
+    <cd:Array>
+      <cd:Description>Longitude of the tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tangent_alt">
+    <cd:Array>
+      <cd:Description>Altitude of the tangent point 2. values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_tangent_lat">
+    <cd:Array>
+      <cd:Description>Error on the latitude of the tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_tangent_long">
+    <cd:Array>
+      <cd:Description>Error on the longitude of the tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-7 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_tangent_alt">
+    <cd:Array>
+      <cd:Description>Error on the altitude of the tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="distance">
+    <cd:Array>
+      <cd:Description>Distance spacecraft - tangent point. 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="azi_dir">
+    <cd:Integer>
+      <cd:Description>Instrument pointing direction (azimuth) provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ele_dir">
+    <cd:Integer>
+      <cd:Description>Instrument pointing direction (elevation) provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Unit>1e-6 degrees</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="star_direct">
+    <cd:Array>
+      <cd:Description>Virtual star direction in the quasi-true of date frame</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_nodes_rt">
+    <cd:Integer>
+      <cd:Description>Number of nodes of the ray tracing provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tangent_point_ind">
+    <cd:Integer>
+      <cd:Description>Index of the tangent point in the list of the ray tracing nodes provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="p_delta">
+    <cd:Array>
+      <cd:Description>Interpolation factor P for the law delta(lambda). 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="q_delta">
+    <cd:Array>
+      <cd:Description>Interpolation factor Q for the law delta(lambda). 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="p_h0">
+    <cd:Array>
+      <cd:Description>Interpolation factors P for the law h0(lambda). 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="q_h0">
+    <cd:Array>
+      <cd:Description>Interpolation factors Q for the law h0(lambda). 2 values provided at the beginning and during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lat_rt">
+    <cd:Array>
+      <cd:Description>Latitude of the ray tracing grid nodes provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>150</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="long_rt">
+    <cd:Array>
+      <cd:Description>Longitude of the ray tracing grid nodes provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>150</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="alt_rt">
+    <cd:Array>
+      <cd:Description>Altitude of the ray tracing grid nodes provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>150</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="air_density">
+    <cd:Float>
+      <cd:Description>Air density at the tangent point provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="atm_press">
+    <cd:Float>
+      <cd:Description>Atmospheric pressure at the tangent point provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="temp_rt">
+    <cd:Array>
+      <cd:Description>Air temperature at the ray tracing grid nodes provided during the measurement, generally at half-measurement (the temporal shift is given by the time shift for the ray tracing - see the Occultation data GADS)</cd:Description>
+      <cd:Dimension>150</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>K</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sun_zenith_angle_spacecraft">
+    <cd:Float>
+      <cd:Description>Sun zenith angle at the spacecraft</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sun_zenith_angle_tangent">
+    <cd:Float>
+      <cd:Description>Sun zenith angle at the tangent point</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sun_azimuth_angle_tangent">
+    <cd:Float>
+      <cd:Description>Sun azimuth angle at the tangent point</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="app_altitude">
+    <cd:Integer>
+      <cd:Description>Apparent altitude of the central background</cd:Description>
+      <cd:Unit>1e-2 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

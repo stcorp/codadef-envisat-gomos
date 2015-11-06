@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_GADS_bad_pixels_map" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_bad_spa_ccd1">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in the SPA CCD1</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_spa_ccd1">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of SPA CCD1</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_bad_spa_ccd1">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of SPA CCD1</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_bad_spa_ccd2">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in the SPA CCD2</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_spa_ccd2">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of SPA CCD2</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_bad_spa_ccd2">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of SPA CCD2</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_bad_spb_ccd1">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in the SPB CCD1</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_spb_ccd1">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of SPB CCD1</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_bad_spb_ccd1">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of SPB CCD1</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_bad_spb_ccd2">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in the SPB CCD2</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_spb_ccd2">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of SPB CCD2</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="line_bad_spb_ccd2">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of SPB CCD2</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_bad_fp1">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in FP1</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_fp1">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of FP1</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lines_bad_fp1">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of FP1</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_bad_fp2">
+    <cd:Integer>
+      <cd:Description>Number of bad pixels in FP2</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="col_bad_fp2">
+    <cd:Array>
+      <cd:Description>Column index of the bad pixels of FP2</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lines_bad_fp2">
+    <cd:Array>
+      <cd:Description>Line index of the bad pixels of FP2</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

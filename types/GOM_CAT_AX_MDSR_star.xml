@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAT_AX_MDSR_star" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the MDSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cat_star_id">
+    <cd:Integer>
+      <cd:Description>Star identifier number in the GOMOS catalogue</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hipp_cat">
+    <cd:Integer>
+      <cd:Description>Hipparcos Input Catalogue</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="comp_cons">
+    <cd:Text format="ascii">
+      <cd:Description>Component(s) considered</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="sat_target">
+    <cd:Integer>
+      <cd:Description>Satellite target</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hd_hde_num">
+    <cd:Integer>
+      <cd:Description>HD/HDE number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="bd_num">
+    <cd:Text format="ascii">
+      <cd:Description>BD number</cd:Description>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="cd_num">
+    <cd:Text format="ascii">
+      <cd:Description>CD number</cd:Description>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="cpd_num">
+    <cd:Text format="ascii">
+      <cd:Description>CPD number</cd:Description>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="fk5">
+    <cd:Text format="ascii">
+      <cd:Description>FK5</cd:Description>
+      <cd:ByteSize>7</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="agk3_cpc_num">
+    <cd:Text format="ascii">
+      <cd:Description>AGK3/CPC number</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="sao_num">
+    <cd:Integer>
+      <cd:Description>SAO number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ident_1">
+    <cd:Text format="ascii">
+      <cd:Description>First of the two selected identifiers</cd:Description>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ident_2">
+    <cd:Text format="ascii">
+      <cd:Description>Second of the two selected identifiers</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="other_id">
+    <cd:Text format="ascii">
+      <cd:Description>Other Identifiers</cd:Description>
+      <cd:ByteSize>13</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="right_asc_h">
+    <cd:Integer>
+      <cd:Description>Right ascension hours (JD2000)</cd:Description>
+      <cd:Unit>hours</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="right_asc_m">
+    <cd:Integer>
+      <cd:Description>Right ascension minutes (JD2000)</cd:Description>
+      <cd:Unit>minutes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="right_asc_s">
+    <cd:Float>
+      <cd:Description>Right ascension seconds (JD2000)</cd:Description>
+      <cd:Unit>seconds</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="decl_deg">
+    <cd:Integer>
+      <cd:Description>Declination degrees (JD2000)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="decl_arcmin">
+    <cd:Integer>
+      <cd:Description>Declination arcmin (JD2000)</cd:Description>
+      <cd:Unit>arcmin</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="decl_arcsec">
+    <cd:Float>
+      <cd:Description>Declination arcsec (JD2000)</cd:Description>
+      <cd:Unit>arcsec</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="right_asc_dec_deg">
+    <cd:Float>
+      <cd:Description>Right ascension decimal degrees (JD2000)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="decl_dec_deg">
+    <cd:Float>
+      <cd:Description>Declination decimal degrees (JD2000)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="right_asc_err">
+    <cd:Float>
+      <cd:Description>Standard error of the right ascension</cd:Description>
+      <cd:Unit>1e-3 arcsec</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="decl_err">
+    <cd:Float>
+      <cd:Description>Standard error of the declination</cd:Description>
+      <cd:Unit>1e-3 arcsec</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="source_pos">
+    <cd:Integer>
+      <cd:Description>Source of position</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="right_asc_h_b1950">
+    <cd:Integer>
+      <cd:Description>Right ascension hours (B1950)</cd:Description>
+      <cd:Unit>hours</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="right_asc_m_b1950">
+    <cd:Integer>
+      <cd:Description>Right ascension minutes (B1950)</cd:Description>
+      <cd:Unit>minutes</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="right_asc_s_b1950">
+    <cd:Float>
+      <cd:Description>Right ascension seconds (B1950)</cd:Description>
+      <cd:Unit>seconds</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="decl_deg_b1950">
+    <cd:Integer>
+      <cd:Description>Declination degrees (B1950)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="decl_arcmin_b1950">
+    <cd:Integer>
+      <cd:Description>Declination arcmin (B1950)</cd:Description>
+      <cd:Unit>arcmin</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="decl_arcsec_b1950">
+    <cd:Float>
+      <cd:Description>Declination arcsec (B1950)</cd:Description>
+      <cd:Unit>arcsec</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="epoch">
+    <cd:Integer>
+      <cd:Description>Epoch for the position</cd:Description>
+      <cd:Unit>years</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="gal_lat">
+    <cd:Integer>
+      <cd:Description>Galactic latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="gal_long">
+    <cd:Integer>
+      <cd:Description>Galactic longitude</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ecl_lat">
+    <cd:Integer>
+      <cd:Description>Ecliptic latitude</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ecl_long">
+    <cd:Integer>
+      <cd:Description>Ecliptic longitude</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mag_hipp">
+    <cd:Float>
+      <cd:Description>Magnitude in the Hipparcos photometric system</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="v_mag">
+    <cd:Float>
+      <cd:Description>V magnitude</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="v_mag_err">
+    <cd:Float>
+      <cd:Description>Error of V magnitude</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="b_v">
+    <cd:Float>
+      <cd:Description>B-V</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="b_v_err">
+    <cd:Float>
+      <cd:Description>Error of B-V</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="source_photo">
+    <cd:Integer>
+      <cd:Description>Source of photometry</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_code_1">
+    <cd:Integer>
+      <cd:Description>Variability code 1</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_code_2">
+    <cd:Integer>
+      <cd:Description>Variability code 2</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ccdm_num">
+    <cd:Text format="ascii">
+      <cd:Description>CCDM number</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="comp_cons_2">
+    <cd:Text format="ascii">
+      <cd:Description>Components considered</cd:Description>
+      <cd:ByteSize>2</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="pos_angle">
+    <cd:Text format="ascii">
+      <cd:Description>Position angle between the components</cd:Description>
+      <cd:ByteSize>4</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="sep_angle">
+    <cd:Float>
+      <cd:Description>Separation between the components considered</cd:Description>
+      <cd:Unit>arcsec</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mag_diff">
+    <cd:Float>
+      <cd:Description>Magnitude difference between the components considered</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mult_type">
+    <cd:Integer>
+      <cd:Description>Multiplicity type</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="var_star_name">
+    <cd:Text format="ascii">
+      <cd:Description>Variable star name</cd:Description>
+      <cd:ByteSize>9</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="var_type">
+    <cd:Text format="ascii">
+      <cd:Description>Type of variability</cd:Description>
+      <cd:ByteSize>3</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="val_period">
+    <cd:Float>
+      <cd:Description>Period of variation</cd:Description>
+      <cd:Unit>days</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="v_mag_max">
+    <cd:Float>
+      <cd:Description>V magnitude at maximum luminosity</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="v_mag_min">
+    <cd:Float>
+      <cd:Description>V magnitude at minimum luminosity</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="code_err_v">
+    <cd:Integer>
+      <cd:Description>Coded error of the V</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="code_spec_mag">
+    <cd:Integer>
+      <cd:Description>Code specifying the magnitudes</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="parallax">
+    <cd:Integer>
+      <cd:Description>Parallax</cd:Description>
+      <cd:Unit>1e-3 arcsec</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>arcsec</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="parallax_err">
+    <cd:Integer>
+      <cd:Description>Standard error of parallax</cd:Description>
+      <cd:Unit>1e-3 arcsec</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>arcsec</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="parallax_type">
+    <cd:Integer>
+      <cd:Description>Type of parallax</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="prop_mot_ra">
+    <cd:Float>
+      <cd:Description>Proper motion in right ascension</cd:Description>
+      <cd:Unit>arcsec/year</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="prop_mo_decl">
+    <cd:Float>
+      <cd:Description>Proper motion in declination</cd:Description>
+      <cd:Unit>arcsec/year</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="prop_mot_ra_err">
+    <cd:Float>
+      <cd:Description>Error of the proper motion in right ascension</cd:Description>
+      <cd:Unit>1e-3 arcsec/yr</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="prop_mot_decl_err">
+    <cd:Float>
+      <cd:Description>Error of the proper motion in declination</cd:Description>
+      <cd:Unit>1e-3 arcsec/yr</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="prop_mot_source">
+    <cd:Integer>
+      <cd:Description>Source of proper motion</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rad_vel">
+    <cd:Float>
+      <cd:Description>Radial velocity</cd:Description>
+      <cd:Unit>km/s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="qual_vel">
+    <cd:Integer>
+      <cd:Description>Quality of radial velocity</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rad_vel_source">
+    <cd:Integer>
+      <cd:Description>Source of radial velocity</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_type">
+    <cd:Text format="ascii">
+      <cd:Description>Spectral type and luminosity class</cd:Description>
+      <cd:ByteSize>11</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spec_type_source">
+    <cd:Integer>
+      <cd:Description>Source of the spectral type data</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="id_chart">
+    <cd:Integer>
+      <cd:Description>Survey/identification chart</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hr_num">
+    <cd:Integer>
+      <cd:Description>Hr number</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="bsc_star_name">
+    <cd:Text format="ascii">
+      <cd:Description>Star name in the BSC catalogue</cd:Description>
+      <cd:ByteSize>25</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="ub_john">
+    <cd:Float>
+      <cd:Description>U-B on Johnson system</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ri_john">
+    <cd:Float>
+      <cd:Description>R-I on Johnson system</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="vsini">
+    <cd:Text format="ascii">
+      <cd:Description>vsini (Projected rotational velocities)</cd:Description>
+      <cd:ByteSize>5</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="eff">
+    <cd:Integer>
+      <cd:Description>Effective star temperature</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="qual_1">
+    <cd:Text format="ascii">
+      <cd:Description>Quality codes 1</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="qual_2">
+    <cd:Text format="ascii">
+      <cd:Description>Quality codes 2</cd:Description>
+      <cd:ByteSize>10</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>224</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

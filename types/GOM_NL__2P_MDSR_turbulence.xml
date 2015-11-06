@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__2P_MDSR_turbulence" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tangent_alt">
+    <cd:Array>
+      <cd:Description>Tangent altitude including fluctuations. A maximum of 20 information per measurement is provided corresponding to a frequency of 40 Hz</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_prof">
+    <cd:Array>
+      <cd:Description>High resolution vertical temperature profile. A maximum of 20 information per measurement is provided corresponding to a frequency of 40 Hz</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="loc_density">
+    <cd:Array>
+      <cd:Description>Local density. Tangent line densities (40 Hz)</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm3</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcd">
+    <cd:Array>
+      <cd:Description>PCD summary: value 0 indicates 'the turbulence computation is valid or was not performed'</cd:Description>
+      <cd:Dimension>20</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

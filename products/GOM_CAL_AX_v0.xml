@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="GOM_CAL_AX_v0" format="binary" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="Auxiliary_Data_SPH"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="cal_general">
+      <cd:Array>
+        <cd:Description>General GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_general_v0"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[0] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[0]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_bad_pixel">
+      <cd:Array>
+        <cd:Description>Bad pixel GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_bad_pixels_map"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[1] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[1]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_non_linearity">
+      <cd:Array>
+        <cd:Description>Non-linearity GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_nonlinearity_v0"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[2] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[2]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_fp_dark_charge">
+      <cd:Array>
+        <cd:Description>Dark charge maps GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_dark_charge_maps_v0"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[3] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[3]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_fp_prnu">
+      <cd:Array>
+        <cd:Description>Non-uniformity maps GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_non_uniformity_maps_v0"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[4] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[4]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_fp_straylight">
+      <cd:Array>
+        <cd:Description>Straylight maps GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_straylight"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[5] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[5]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_instrument_noise">
+      <cd:Array>
+        <cd:Description>Instrument noise GADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[6]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_GADS_instrument_noise_v0"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[6] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[6]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_sp_dark_charge">
+      <cd:Array>
+        <cd:Description>Dark Charge maps MDS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[7]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_MDSR_dark_charge_maps"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[7] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[7]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_sp_prnu">
+      <cd:Array>
+        <cd:Description>Non-uniformity maps MDS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[8]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_MDSR_non_uniformity_maps"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[8] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[8]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_sun_straylight">
+      <cd:Array>
+        <cd:Description>Sun straylight maps MDS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[9]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_MDSR_sunstray"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[9] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[9]]]></cd:BitOffset>
+    </cd:Field>
+    <cd:Field name="cal_earth_straylight">
+      <cd:Array>
+        <cd:Description>Earth straylight maps MDS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[10]]]></cd:Dimension>
+        <cd:NamedType id="GOM_CAL_AX_MDSR_earthstray"/>
+      </cd:Array>
+      <cd:Available><![CDATA[$ds_available[10] != 0]]></cd:Available>
+      <cd:BitOffset><![CDATA[$ds_offset[10]]]></cd:BitOffset>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 11]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "CAL_GENERAL                 "); $ds_to_dsd_index[1] = index(/dsd, str(./ds_name) == "CAL_BAD_PIXEL               "); $ds_to_dsd_index[2] = index(/dsd, str(./ds_name) == "CAL_NON_LINEARITY           "); $ds_to_dsd_index[3] = index(/dsd, str(./ds_name) == "CAL_FP_DARK_CHARGE          "); $ds_to_dsd_index[4] = index(/dsd, str(./ds_name) == "CAL_FP_PRNU                 "); $ds_to_dsd_index[5] = index(/dsd, str(./ds_name) == "CAL_FP_STRAYLIGHT           "); $ds_to_dsd_index[6] = index(/dsd, str(./ds_name) == "CAL_INSTRUMENT_NOISE        "); $ds_to_dsd_index[7] = index(/dsd, str(./ds_name) == "CAL_SP_DARK_CHARGE          "); $ds_to_dsd_index[8] = index(/dsd, str(./ds_name) == "CAL_SP_PRNU                 "); $ds_to_dsd_index[9] = index(/dsd, str(./ds_name) == "CAL_SUN_STRAYLIGHT          "); $ds_to_dsd_index[10] = index(/dsd, str(./ds_name) == "CAL_EARTH_STRAYLIGHT        ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && !(bytes(/dsd[$ds_to_dsd_index[i]]/filename, 8) == "NOT USED"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

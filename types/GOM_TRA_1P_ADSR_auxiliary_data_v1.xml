@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_ADSR_auxiliary_data_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the measurement</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (set to 1 if there are no Transmission MDSRs or SATU MDSRs corresponding to this ADSR, set to zero otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_shift">
+    <cd:Array>
+      <cd:Description>Spectral shift of the start spectra</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="off_back">
+    <cd:Float>
+      <cd:Description>Offset for the estimated background coding</cd:Description>
+      <cd:Unit>e</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="gain_back">
+    <cd:Float>
+      <cd:Description>Gain for the estimated background coding</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pcd">
+    <cd:Array>
+      <cd:Description>PCD at measurement level. The following values are reported. Despite the notation as a 'Flag' each value is in fact an integer value: 1. FLAG_DV(f) - data valid (0 = anomaly; 1 = time out; 3 = fully successful; 9 = missing packet); 2. Not used anymore; 3. FLAGS_time(f) - datation (0 = no datation problem; 1 = problem during the datation processing; 2 = invalid measurement (FLAG_DV(f) = 0 or 1); 9 = missing packet); 4. FLAG_rt(f) - ray-tracing (0 = no problem; 1 = wrong pointing (not in direction of the atmosphere); 2 = ray path across the Earth); 5. FLAG_gl(f) - geolocation (0 = no problem; 1 = geolocation problem); 6. FLAG_sat(f) - number of saturated samples per measurement; 7. FLAG_cr(f) - number of cosmic rays detected per measurement; 8. FLAG_irv(f) - vignetting correction flag (0 = no vignetting; 1 = vignetting occured during the measurement); 9. FLAG_bg(f) - number of background flagged data per measurement; 10. FLAG_out(f) - star spectrum out of band (0 = star spectrum inside central band; 1 = centre line of star spectrum image is outside the central band); 11. FLAG_ft(f) - number of samples per measurement for which full transmission flag FL_ft(k,f) has been raised; 12. FLAG^FP_sat(1,f) - number of photometer 1 saturations; 13. FLAG^FP_sat(2,f) - number of photometer 2 saturations; 14. FLAG - stability flag (0 = no measurement skipped; n = first measurement used to compute the reference star spectrum is number n (index starting at 0)); 15. FLAG mod(f) - Demodulation correction flag (0 = no problem, +1 = problem of structure for SPA1 upper band; +2 = problem of structure for SPA1 lower band; +4 = inconsistent upper and lower band structures for SPA1; +10 = problem of structure for SPA2 upper band; +20 = problem of structure for SPA2 lower band; +40 = inconsistent upper and lower band structures for SPA2); 16. FLAG_uc(f) - ratio between the averaged upper band signel and the averaged star signal over the SPA2 spectral range (n &lt; 65535 = computed ration expressed in %; 65535 = star signal is equal to 0).</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

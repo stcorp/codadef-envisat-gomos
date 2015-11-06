@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_GADS_non_uniformity_maps_v0" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="first_ccd_line">
+    <cd:Array>
+      <cd:Description>Index of the first CCD line for the spectrometer non-uniformity maps</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_non_uni_width">
+    <cd:Integer>
+      <cd:Description>Spectrometers non-uniformity maps width (in number of lines)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slit_width_var">
+    <cd:Array>
+      <cd:Description>Slit width variation</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>143</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp1_non_uni">
+    <cd:Array>
+      <cd:Description>FP1 relative pixel response non-uniformity.</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit/>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp2_non_uni">
+    <cd:Array>
+      <cd:Description>FP2 relative pixel response non-uniformity.</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit/>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_LIM_1P_MDSR_limb_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="up_low_back_no_corr">
+    <cd:Array>
+      <cd:Description>Scaled upper and lower background spectra without straylight correction (2336 upper followed by 2336 lower)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="up_low_back_corr">
+    <cd:Array>
+      <cd:Description>Scaled upper and lower background spectra after straylight and IR-vignetting corrections (2336 upper followed by 2336 lower)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_up_low_back_corr">
+    <cd:Array>
+      <cd:Description>Error bar for the upper and lower background spectra after straylight and IR-vignetting corrections (2336 upper followed by 2336 lower)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>%</cd:Unit>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcd">
+    <cd:Array>
+      <cd:Description>PCD at sample level (SP) PCD at sample level for the Spectrometers.</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

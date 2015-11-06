@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_GADS_occultation_data_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_points">
+    <cd:Array>
+      <cd:Description>Number of points of the spectra</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_fp">
+    <cd:Integer>
+      <cd:Description>Number of photometer output data per measurement</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_satu">
+    <cd:Integer>
+      <cd:Description>Number of SATU output data per measurement</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fp_cen_wl">
+    <cd:Array>
+      <cd:Description>Photometers central wavelength (photometer 1, followed by photometer 2)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_eff_sampl_time">
+    <cd:Float>
+      <cd:Description>Spectrometer effective sampling time.</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_shift_rt">
+    <cd:Float>
+      <cd:Description>Effective time shift for ray tracing / geolocation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_wav_rt">
+    <cd:Integer>
+      <cd:Description>Reference wavelength for the ray tracing</cd:Description>
+      <cd:Unit>1e-1 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="size_rad_sens_curve_limb">
+    <cd:Integer>
+      <cd:Description>Size of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="abs_rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Abscissae of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Radiometric sensitivity curve (limb) (unit: lf/e)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="size_rad_sens_curve_star">
+    <cd:Integer>
+      <cd:Description>Size of the radiometric sensitivity curve (star)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="abs_rad_sens_curve_star">
+    <cd:Array>
+      <cd:Description>Abscissae of the radiometric sensitivity curve (star)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rad_sens_curve_star">
+    <cd:Array>
+      <cd:Description>Radiometric sensitivity curve (star)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>photons/(s.cm2.nm.e)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_sp">
+    <cd:Array>
+      <cd:Description>Thermistor temperature (SP), one for each CCD array</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="temp_fp">
+    <cd:Array>
+      <cd:Description>Thermistor temperature (FP), one for each photometer</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dark_charge">
+    <cd:Array>
+      <cd:Description>Dark charge used for the spectrometer dark charge correction</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mean_spec_dark_charge">
+    <cd:Array>
+      <cd:Description>Mean spectrometer dark charge.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mean_photo_dark_charge">
+    <cd:Array>
+      <cd:Description>Mean photometer dark charge.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="therm_off">
+    <cd:Array>
+      <cd:Description>Offset between thermistor and CCD arrays temperature 4 for Spectrometers then 2 for photometers.</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sun_coord">
+    <cd:Array>
+      <cd:Description>Sun coordinates in the geocentric equatorial inertial system.</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

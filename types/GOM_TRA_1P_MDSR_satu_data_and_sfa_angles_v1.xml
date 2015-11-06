@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_MDSR_satu_data_and_sfa_angles_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_mispointing_angle_x">
+    <cd:Array>
+      <cd:Description>SATU mispointing angle (X direction)</cd:Description>
+      <cd:Dimension>50</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="satu_mispointing_angle_y">
+    <cd:Array>
+      <cd:Description>SATU mispointing angle (Y direction)</cd:Description>
+      <cd:Dimension>50</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1e-6 rad</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sfa_azimuth_angle">
+    <cd:Array>
+      <cd:Description>SFA azimuth angle.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="sfa_zenith_angle">
+    <cd:Array>
+      <cd:Description>SFA elevation angle.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

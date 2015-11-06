@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_INS_AX_GADS_general_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="spec_samp_freq">
+    <cd:Integer>
+      <cd:Description>Spectrometers sampling frequency</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>Hz</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ph_samp_freq">
+    <cd:Integer>
+      <cd:Description>Photometers sampling frequency</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>Hz</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_samp_freq">
+    <cd:Integer>
+      <cd:Description>SATU sampling frequency</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>Hz</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sfa_samp_freq">
+    <cd:Integer>
+      <cd:Description>SFA sampling frequency</cd:Description>
+      <cd:Unit>Hz</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>Hz</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_samp_time">
+    <cd:Integer>
+      <cd:Description>Spectrometers sampling time</cd:Description>
+      <cd:Unit>1e-9 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ph_samp_time">
+    <cd:Integer>
+      <cd:Description>Photometers sampling time</cd:Description>
+      <cd:Unit>1e-9 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_off">
+    <cd:Integer>
+      <cd:Description>SATU measurements coding offset</cd:Description>
+      <cd:Unit>1e-9 rad</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>rad</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_gain">
+    <cd:Integer>
+      <cd:Description>SATU measurements coding gain</cd:Description>
+      <cd:Unit>1e-9 rad/ADU</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>rad/ADU</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_ref_wav">
+    <cd:Integer>
+      <cd:Description>SATU reference wavelength</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="conv_factors">
+    <cd:Array>
+      <cd:Description>Factors for the conversion of the SFA angles from SPM axes to GOMOS axes</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_focal_len">
+    <cd:Array>
+      <cd:Description>Spectrometers focal lengths</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ph_focal_len">
+    <cd:Array>
+      <cd:Description>Photometers focal lengths</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4 m</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit>m</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="slit_width">
+    <cd:Integer>
+      <cd:Description>Slit width</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mean_pix_spatial">
+    <cd:Array>
+      <cd:Description>Mean pixel size in the spatial direction (SP)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mean_pix_spectral">
+    <cd:Array>
+      <cd:Description>Mean pixel size in the spectral direction (SP)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="mean_pix_ph">
+    <cd:Array>
+      <cd:Description>Mean pixel size (FP) X and Y directions</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lower_wav_invalid">
+    <cd:Float>
+      <cd:Description>Lower wavelength of the invalid spectral range</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="higher_wav_invalid">
+    <cd:Float>
+      <cd:Description>Higher wavelength of the invalid spectral range</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>192</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

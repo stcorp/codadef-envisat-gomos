@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR1_AX_GADS_general_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="cos_rays_flag">
+    <cd:Integer>
+      <cd:Description>Cosmic rays processing activation switch</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mod_corr_switch">
+    <cd:Integer>
+      <cd:Description>Modulation correction switch</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_charge_flag">
+    <cd:Integer>
+      <cd:Description>Dark charge correction processing activation switch. 0 = no correction; 1 = use DC maps; 2 = use first measurements; 3 = use DC maps from ADF</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="inter_stray_flag">
+    <cd:Integer>
+      <cd:Description>Internal straylight correction activation switch. 0 = correction; 1 = no correction</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="earth_stray_flag">
+    <cd:Integer>
+      <cd:Description>External earth straylight correction activation switch. 0 = correction; 1 = no correction</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sun_stray_flag">
+    <cd:Integer>
+      <cd:Description>External sun straylight correction activation switch. 0 = correction; 1 = no correction</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cen_back_flag">
+    <cd:Integer>
+      <cd:Description>Central background estimation mode</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_flag">
+    <cd:Integer>
+      <cd:Description>SATU data use activation switch</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vign_flag">
+    <cd:Integer>
+      <cd:Description>Vignetting activation switch. 0 = do not perform vignetting; 1 = perform vignetting</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="flat_flag">
+    <cd:Integer>
+      <cd:Description>Flat-field correction mode. 0 = no flat-field correction; 1 = flat-field correction active; 2 = use FP data.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="flat_field_switch">
+    <cd:Array>
+      <cd:Description>Flat field correction switches</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="interp_mode_flag">
+    <cd:Integer>
+      <cd:Description>Interpolation mode for spectra resampling. 0 = cubic spline; 1 = linear interpolation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="grid_sel_flag">
+    <cd:Integer>
+      <cd:Description>Spectral grid selection for transmission computation. 0 = acquisition spectral grid; 1 = nominal spectral grid</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cov_flag">
+    <cd:Integer>
+      <cd:Description>Covariance computation mode</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_lin_correction">
+    <cd:Integer>
+      <cd:Description>Non-linearity correction activation switch</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="reflect_activation_sw">
+    <cd:Integer>
+      <cd:Description>Reflectivity correction activation switch</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="earth_mod">
+    <cd:Integer>
+      <cd:Description>Identifier of Earth model</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="flat_earth">
+    <cd:Float>
+      <cd:Description>Flattening of the Earth</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="earth_rad">
+    <cd:Float>
+      <cd:Description>Earth equatorial radius</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="atm_thick">
+    <cd:Float>
+      <cd:Description>Atmosphere thickness</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="earth_ecc">
+    <cd:Float>
+      <cd:Description>Earth orbit eccentricity</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sun_const">
+    <cd:Float>
+      <cd:Description>Gravitational constant for the sun</cd:Description>
+      <cd:Unit>m3/s2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="orbit_angle">
+    <cd:Float>
+      <cd:Description>Angle between the vernal axis and the Earth orbit perihelion direction</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="semi_axis">
+    <cd:Float>
+      <cd:Description>Earth orbit semi-major axis</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="light_c">
+    <cd:Integer>
+      <cd:Description>Speed of light</cd:Description>
+      <cd:Unit>m/s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>m/s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="param_occ_type">
+    <cd:Array>
+      <cd:Description>Parameters for the determination of the occultation type (full dark / bright / twilight / straylight). Only the 5 first values are useful: 1. TGP altitude threshold for bright limb condition (km) - nominal is 50km; 2. TGP sun zenith angle threshold for bright limb condition (deg) - nominal is 97 deg; 3. TGP altitude threshold for twilight condition (km) - nominal is 100km; 4. TGP sun zenith angle threshold for twilight condition (deg) - nominal is 110 deg; 5. Satellite sun zenith angle threshold for straylight condition (deg) - nominal is 120 deg.</cd:Description>
+      <cd:Dimension>8</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="ray_param">
+    <cd:Array>
+      <cd:Description>Ray tracing parameters</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ray_time_shift">
+    <cd:Integer>
+      <cd:Description>Time shift for ray tracing computation</cd:Description>
+      <cd:Unit>1e-3 s</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>s</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_wl">
+    <cd:Integer>
+      <cd:Description>Minimum wavelength value for ray-tracing</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_wl">
+    <cd:Integer>
+      <cd:Description>Maximum wavelength value for ray-tracing</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_wl">
+    <cd:Integer>
+      <cd:Description>Reference wavelength for the ray tracing</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spec_sat">
+    <cd:Array>
+      <cd:Description>Spectrometer sample saturation level. One amplitude level is specified for each gain of each spectrometer. Order: SPA1 gains 0,1,2,3 followed by SPA2 gains 0,1,2,3 and then SPB1 and SPB2</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>ADU</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp_sat">
+    <cd:Array>
+      <cd:Description>Photometer data saturation level</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>ADU</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="half_meas">
+    <cd:Integer>
+      <cd:Description>Half-number of measurements for CR detection</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="half_col">
+    <cd:Integer>
+      <cd:Description>Half-number of CCD columns for CR detection</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cr_thresh_rel">
+    <cd:Array>
+      <cd:Description>Threshold for relative variation of the signal for cosmic rays detection</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>%</cd:Unit>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cr_thresh_abs">
+    <cd:Array>
+      <cd:Description>Threshold for absolute variation of the signal for cosmic rays detection</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>ADU</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cr_min">
+    <cd:Array>
+      <cd:Description>Threshold for cosmic rays detection activation. Minimum sample value for which the cosmic rays detection processing is applied.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>ADU</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="f_dark">
+    <cd:Integer>
+      <cd:Description>Number of frames for dark charge estimation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="thr_back_dl">
+    <cd:Integer>
+      <cd:Description>Threshold for background correction (dark limb)</cd:Description>
+      <cd:Unit>e</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="thr_back_bl">
+    <cd:Integer>
+      <cd:Description>Threshold for background correction (bright limb)</cd:Description>
+      <cd:Unit>e</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_h">
+    <cd:Integer>
+      <cd:Description>Altitude range used in the estimated central background computation (general method)</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="poly_back_order">
+    <cd:Integer>
+      <cd:Description>Order of the polynomial used in the estimated central background computation (general method)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="flat_index">
+    <cd:Integer>
+      <cd:Description>Photometer index for the scintillation correction in the flat-field correction processing</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_ref">
+    <cd:Integer>
+      <cd:Description>Number of measurements to be used for the reference star spectrum computation</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_spectra">
+    <cd:Integer>
+      <cd:Description>Maximum number of star spectra to be checked for the computation of the reference star spectrum</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_spectra">
+    <cd:Integer>
+      <cd:Description>Minimum number of star spectra used to compute the reference star spectrum before a flag is raised</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="thres_ref_star_spec">
+    <cd:Array>
+      <cd:Description>Threshold for the validity of the reference star spectrum</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_pix_flagged">
+    <cd:Array>
+      <cd:Description>Number of pixels flagged if the reference star spectrum is below the validity threshold</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="thr_error_meas">
+    <cd:Integer>
+      <cd:Description>Threshold for MPH error indicator computation</cd:Description>
+      <cd:Unit>1e-2 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_alt_start_spectrum">
+    <cd:Array>
+      <cd:Description>Minimum altitudes for the computation of the reference start spectrum</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

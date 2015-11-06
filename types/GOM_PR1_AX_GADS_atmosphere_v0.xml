@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR1_AX_GADS_atmosphere_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="acc_grav">
+    <cd:Float>
+      <cd:Description>Standard acceleration of gravity</cd:Description>
+      <cd:Unit>m/s2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="p_ref">
+    <cd:Float>
+      <cd:Description>Reference pressure</cd:Description>
+      <cd:Unit>hPa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_density">
+    <cd:Float>
+      <cd:Description>Air density in standard conditions of temperature and pressure (T=288K, P=reference pressure)</cd:Description>
+      <cd:Unit>kg/m3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="abs_ref_p">
+    <cd:Float>
+      <cd:Description>Absolute Reference pressure</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="avogadro">
+    <cd:Float>
+      <cd:Description>Avogadro number</cd:Description>
+      <cd:Unit>1/mole</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="uni_gas_const">
+    <cd:Float>
+      <cd:Description>Universal gas constant</cd:Description>
+      <cd:Unit>J/mole/K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_weight">
+    <cd:Float>
+      <cd:Description>Molecular weight of the dry air</cd:Description>
+      <cd:Unit>kg/mole</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_p_values">
+    <cd:Array>
+      <cd:Description>Reference pressure level values</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>hPa</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_grid_lower">
+    <cd:Integer>
+      <cd:Description>Number of altitude grid points for lower part of the atmosphere</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_grid_upper">
+    <cd:Integer>
+      <cd:Description>Number of altitude grid points for upper part of the atmosphere</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_alt_low">
+    <cd:Float>
+      <cd:Description>Minimum altitude for lower part of the atmosphere</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_alt_upper">
+    <cd:Float>
+      <cd:Description>Minimum altitude for upper part of the atmosphere</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_step_low">
+    <cd:Float>
+      <cd:Description>Altitude step for lower part of the atmosphere</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_step_upper">
+    <cd:Float>
+      <cd:Description>Altitude step for upper part of the atmosphere</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_p_lower">
+    <cd:Integer>
+      <cd:Description>Number of pressure levels for lower part of the atmosphere</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_p_upper">
+    <cd:Integer>
+      <cd:Description>Number of pressure levels for upper part of the atmosphere</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="n_lev_3">
+    <cd:Integer>
+      <cd:Description>Index of the reference level for the iterative verification of hydrostaticity</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ind_spat_res">
+    <cd:Integer>
+      <cd:Description>Index for the spatial resolution. Used only in case of ECMWF data unavailability</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="init_latlong">
+    <cd:Record>
+      <cd:Description>Initial latitude/longitude value for the spatial grid (ref.)</cd:Description>
+      <cd:Field name="latitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_north</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_north</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="longitude">
+        <cd:Integer>
+          <cd:Unit>1e-6 degrees_east</cd:Unit>
+          <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+            <cd:Unit>degrees_east</cd:Unit>
+          </cd:Conversion>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>int32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="lat_step">
+    <cd:Float>
+      <cd:Description>Reference discretisation step in latitude</cd:Description>
+      <cd:Unit>degrees_north</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="long_step">
+    <cd:Float>
+      <cd:Description>Reference discretisation step in longitude</cd:Description>
+      <cd:Unit>degrees_east</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="thr_conv">
+    <cd:Float>
+      <cd:Description>Threshold for the convergence of the iterative process</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iter">
+    <cd:Integer>
+      <cd:Description>Maximum iteration number for the iterative process</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_angle">
+    <cd:Float>
+      <cd:Description>Delta angle for the atmosphere zone in the occultation area</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="trans_height">
+    <cd:Float>
+      <cd:Description>Transition height expressed in number of atmospheric scale heights</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="size_ref_atm_prof">
+    <cd:Integer>
+      <cd:Description>Size of the reference atmospheric profile</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_alt_prof">
+    <cd:Float>
+      <cd:Description>First altitude of the profile</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_step_prof">
+    <cd:Float>
+      <cd:Description>Altitude discretisation</cd:Description>
+      <cd:Unit>km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_STS_AX_MDSR_star_spectrum_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cat_star_id">
+    <cd:Integer>
+      <cd:Description>Identifier of the star in the star catalogue</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spectrum_origin">
+    <cd:Text format="ascii">
+      <cd:Description>Spectrum origin</cd:Description>
+      <cd:ByteSize>128</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="star_spectrum_size">
+    <cd:Integer>
+      <cd:Description>Star spectrum size</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavelength_assignment">
+    <cd:Array>
+      <cd:Description>Star spectrum</cd:Description>
+      <cd:Dimension>3000</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spectrum">
+    <cd:Array>
+      <cd:Description>Star spectrum</cd:Description>
+      <cd:Dimension>3000</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>photons/(s.cm2.nm)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

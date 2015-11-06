@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_LIM_1P_GADS_summary_quality_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="no_valid">
+    <cd:Integer>
+      <cd:Description>No valid data flag. 0 = valid data was found in the Level 0 product; 1 = no valid packets in the Level 0 product.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_int_stray">
+    <cd:Integer>
+      <cd:Description>Internal straylight correction flag. 1 = internal straylight correction was not performed; 0 = internal straylight correction was performed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ext_earth">
+    <cd:Integer>
+      <cd:Description>External earth straylight correction flag. 1 = external earth straylight correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ext_sun">
+    <cd:Integer>
+      <cd:Description>External sun straylight correction flag. 1 = external sun straylight correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_slit_trans">
+    <cd:Integer>
+      <cd:Description>Slit transmission correction flag. 1 = slit transmission correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ref_star_comp">
+    <cd:Integer>
+      <cd:Description>PCD flag for reference star spectrum computation. 0 = no problem; 1 = the reference star spectrum was computed with a small number of measurements; 2 = no valid measurements in the occultation to compute the reference star spectrum (see ref_star_db and no_ref_star).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_star_db">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the star spectrum has been read from the stellar spectra database. 0 = the reference spectrum is computed from the measurements; 1 = the reference spectrum is read in the database; 2 = the reference spectrum was not found in the stellar spectra data base (see no_ref_star).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ref_star">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the reference star spectrum has not been computed. 1 = the reference star spectrum has not been computed; 0 = the reference star spectrum was computed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_flag">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the SATU data have been used for flat field correction. 1 = the SATU data are used; 0 = the SATU data are not used.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_charge_flag">
+    <cd:Integer>
+      <cd:Description>PCD flag for the dark charge computation (photometers). 1 = no DC correction performed; 0 = DC correction performed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_sp_err">
+    <cd:Integer>
+      <cd:Description>Number of source packets containing errors. This value wil equal the number of Transmission MDSRs with their quality flag set to -1.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lev0_id">
+    <cd:Integer>
+      <cd:Description>Level 0 PCD. 0 = standard occultation; 1 = first part of a tangent occultation; 2 = last part of a tangent occultation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="atm_type">
+    <cd:Integer>
+      <cd:Description>Type of atmosphere file used. 54 = One ECMWF file used. Time recorded is included in the occultation period; 102 = One ECMWF file used. Time recorded before the beginning of the occultation (Delta t &lt;= 24h); 103 = One ECMWF file used. Time recorded after the beginning of the occultation (Delta t &lt;= 24h); 106 = One ECMWF file used. Only one time record in the validity interval (Delta t &lt;= 24h); 155 = Two ECMWF files used; 201 = No ECMWF file available. Use MSIS model alone; 202 = Only old ECMWF files (Delta t &gt;= 24h). Use MSIS model alone; 203 = Only future ECMWF files (Delta t &gt;= 24h). Use MSIS model alone; 206 = No ECMWF file available in the validity interval (Delta t &gt;= 24h). Use MSIS model alone.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_charge_info">
+    <cd:Integer>
+      <cd:Description>Dark charge correction information. 0 = dark charge map used; 1 = first measurements used; 2 = no dark charge correction applied; 11 = first measurements not available - DC corrections with DC maps; 12 = first measurements not available and missing first packet - DC correction with DC maps without temperature dependence; 21 = dark charge map computed from DSA observation has been used.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_limb_cond">
+    <cd:Integer>
+      <cd:Description>Dark/bright limb condition. 0 = dark limb; 1 = bright limb.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="obs_illum_cond">
+    <cd:Integer>
+      <cd:Description>Observation illumination condition. 0 = full dark limb condition; 1 = bright limb condition; 2 = pure twilight condition; 3 = straylight condition; 4 = twilight and straylight condition.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sdp_extract">
+    <cd:Integer>
+      <cd:Description>SDP extraction processing. Number of invalid measurements during the occultation.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dat_err">
+    <cd:Integer>
+      <cd:Description>Datation errors. Number of measurements where flags were raised to indicate a datation problem occurred.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rt_err">
+    <cd:Integer>
+      <cd:Description>Ray tracing errors. Number of measurements with a non-converged ray path.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geo_err">
+    <cd:Integer>
+      <cd:Description>Geolocation errors. Number of measurements performed outside the atmosphere, set to 1000 if completely performed outside the atmosphere.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_err">
+    <cd:Integer>
+      <cd:Description>Saturation errors. Number of measurements containing saturated samples.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cr_err">
+    <cd:Integer>
+      <cd:Description>Cosmic ray errors. Number of measurements where cosmic rays have been detected.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="mod_corr_err">
+    <cd:Integer>
+      <cd:Description>Modulation correction errors. Number of measurements where a modulation correction error has been detected.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vign_err">
+    <cd:Integer>
+      <cd:Description>Vignetting correction. Number of measurements where the vignetting correction was applied.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_cent_back">
+    <cd:Integer>
+      <cd:Description>Central Background. Number of measurements where FLAGbg(f) has been raised.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_flat">
+    <cd:Integer>
+      <cd:Description>Flat field correction. Number of measurements where the star falls outside the central band.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_full_trans_err">
+    <cd:Integer>
+      <cd:Description>Full transmission errors. Number of measurements where a problem has been detected during the full transmission computation.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_bad">
+    <cd:Integer>
+      <cd:Description>Bad Pixels. Number of bad pixels per measurement</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_fp_sat">
+    <cd:Array>
+      <cd:Description>Photometer saturation. Number of photometers saturated samples. First number is for photometer 1 second is for photometer 2</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="back_corr_flag">
+    <cd:Integer>
+      <cd:Description>Background correction flag. 0 = no background correction; 1 = background correction applied (linear interpolation); 2 = background correction applied (exponential interpolation); 3 = background correction applied (general method).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__2P_ADSR_accuracy_estimation" last-modified="2011-02-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag. 1 = all MDSRs corresponding to this ADSR are blank; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="chi_flag">
+    <cd:Float>
+      <cd:Description>Chi^2 final value</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="pow10_line">
+    <cd:Integer>
+      <cd:Description>Scale factor for the elements of the co-variance matrix (spectral inversion). The scale factor is a power of 10 to be applied on each of the covariance elements: Scaled covariance matrix element (field below) = Covariance matrix element (computed in level-2 processing) * 10^-(pow10_line).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cov_line">
+    <cd:Array>
+      <cd:Description>Covariance matrix for line densities after spectral inversion. 12x12 matrix corresponding to the 6 species specified in the MDS plus one potential spare species plus 5 parameters for aerosol spectral dependency. The matrix is symmetrical: only half of the matrix (78 values) is written in the product. The order of the 12 parameters: O3, NO2, NO3, Air, OClO, Aerosols, 5 parameters for aerosol spectral dependence, 1 spare gas.</cd:Description>
+      <cd:Dimension><![CDATA[12 * (12 + 1) / 2]]></cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm4</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pow10_loc">
+    <cd:Integer>
+      <cd:Description>Scale factor for the elements of the covariance matrix (vertical inversion). The scale factor is the power of 10 to be applied on each of the covariance matrix elements: Scaled covariance matrix element (field below) = Covariance matrix element (computed in level-2 processing) * 10^-(pow10_loc).</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cov_loc">
+    <cd:Array>
+      <cd:Description>Covariance matrix for local densities after vertical inversion. 12*7 matrix corresponding to the 7 altitude dependent covariance terms per species. The order of the 12 parameters is: O3, NO2, NO3, Air, O2, H2O, OClO, Aerosol, and 4 spare gases. The diagonal element is always written in the last column of the 12*7 matrix. For a given line (i.e. given by species) and for the six first acquisitions (or layers) the information is written in the DSR are those initially on the right of the diagonal of the covariance matrix. For others, the natural order is used, that is to record the values initially on the left of the diagonal of the covariance matrix.</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm6</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

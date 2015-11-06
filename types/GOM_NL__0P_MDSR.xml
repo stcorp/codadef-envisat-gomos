@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__0P_MDSR" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>ISP Sensing Time</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="gsrt">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Ground Station Reference Time of reception</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="isp_length">
+    <cd:Integer>
+      <cd:Description>Length of the ISP = length of the source packet - 7 bytes</cd:Description>
+      <cd:Unit>bytes</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="crc_errs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs in the ISP which contain a CRC error</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rs_errs">
+    <cd:Integer>
+      <cd:Description>Number of VCDUs in the ISP for which a Reed-Solomon error correction was performed</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Array>
+      <cd:Description>Spare (set to zero)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="packet_header">
+    <cd:NamedType id="CCSDS_packet_header"/>
+  </cd:Field>
+  <cd:Field name="datafield_header">
+    <cd:Record>
+      <cd:Description>Data Field Header</cd:Description>
+      <cd:Field name="datafield_header_length">
+        <cd:Integer>
+          <cd:Description>Datafield Header Length</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="instrument_mode">
+        <cd:Integer>
+          <cd:Description>Instrument Mode</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="icu_msb">
+        <cd:Integer>
+          <cd:Description>ICU (MSB)</cd:Description>
+          <cd:Unit>1/256 s</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="icu_lsb">
+        <cd:Integer>
+          <cd:Description>ICU (LSB)</cd:Description>
+          <cd:Unit>1/524288 s</cd:Unit>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="redundancy_vector">
+        <cd:Integer>
+          <cd:Description>Redundancy Definition Vector</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="instrument_configuration">
+        <cd:Integer>
+          <cd:Description>Instrument Configuration</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="star_identifier">
+        <cd:Integer>
+          <cd:Description>Star Identifier</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="bright_limb_data_valid_flag_spare_0">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>13</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+      <cd:Field name="bright_limb_flag">
+        <cd:Integer>
+          <cd:Description>Dark/Bright Limb Flag. 0 = dark limb; 1 = bright limb.</cd:Description>
+          <cd:BitSize>1</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="data_valid_vlag">
+        <cd:Integer>
+          <cd:Description>Data Valid Flag. 0 = anomaly; 1 = time-out; 3 = fully successful.</cd:Description>
+          <cd:BitSize>2</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dm_gains">
+        <cd:Integer>
+          <cd:Description>DM Gains</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="dm_integration_duration">
+        <cd:Integer>
+          <cd:Description>DM Integration Duration</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="integration_number">
+        <cd:Integer>
+          <cd:Description>Integration Number</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="first_packet">
+        <cd:Array>
+          <cd:Description>First Packet</cd:Description>
+          <cd:Dimension><![CDATA[if(int(../integration_number) == 1, 1, 0)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="ccd_param">
+              <cd:Array>
+                <cd:Description>CCD parameters</cd:Description>
+                <cd:Dimension>2</cd:Dimension>
+                <cd:Dimension>14</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="ccd_temp">
+              <cd:Array>
+                <cd:Description>CCD temperatures</cd:Description>
+                <cd:Dimension>6</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+            <cd:Field name="spare">
+              <cd:Array>
+                <cd:Description>Spare (fill to 100 words)</cd:Description>
+                <cd:Dimension>66</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+              <cd:Hidden/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="nonfirst_packet">
+        <cd:Array>
+          <cd:Description>Non first packet</cd:Description>
+          <cd:Dimension><![CDATA[if(int(../integration_number) != 1, 1, 0)]]></cd:Dimension>
+          <cd:Record>
+            <cd:Field name="satu_param">
+              <cd:Array>
+                <cd:Description>SATU Parameters</cd:Description>
+                <cd:Dimension>100</cd:Dimension>
+                <cd:Integer>
+                  <cd:BitSize>16</cd:BitSize>
+                  <cd:NativeType>uint16</cd:NativeType>
+                </cd:Integer>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="sfa">
+        <cd:Array>
+          <cd:Description>SFA Measurements</cd:Description>
+          <cd:Dimension>15</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>16</cd:BitSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Integer>
+          <cd:Description>Spare</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="source_data_field">
+    <cd:Record>
+      <cd:Description>Source Data Field</cd:Description>
+      <cd:Field name="data">
+        <cd:Array>
+          <cd:Description>CCD data</cd:Description>
+          <cd:Dimension>12033</cd:Dimension>
+          <cd:Integer>
+            <cd:BitSize>8</cd:BitSize>
+            <cd:NativeType>uint8</cd:NativeType>
+          </cd:Integer>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

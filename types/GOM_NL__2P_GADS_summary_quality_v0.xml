@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__2P_GADS_summary_quality_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="no_valid">
+    <cd:Integer>
+      <cd:Description>No valid data flag. 0 = valid data was found in the Level 0 product; 1 = no valid packets in the Level 0 product.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_int_stray">
+    <cd:Integer>
+      <cd:Description>Internal straylight correction flag. 1 = internal straylight correction was not performed; 0 = internal straylight correction was performed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ext_earth">
+    <cd:Integer>
+      <cd:Description>External earth straylight correction flag. 1 = external earth straylight correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ext_sun">
+    <cd:Integer>
+      <cd:Description>External sun straylight correction flag. 1 = external sun straylight correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_slit_trans">
+    <cd:Integer>
+      <cd:Description>Slit transmission correction flag. 1 = slit transmission correction was not performed; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ref_star_comp">
+    <cd:Integer>
+      <cd:Description>PCD flag for reference star spectrum computation. 1 = the reference star spectrum was computed with a small number of measurements; 0 = otherwise.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_star_db">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the star spectrum has been read from the stellar spectra database. 1 = the reference spectrum is read in the database; 0 = the reference spectrum is computed from the measurements.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no_ref_star">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the reference star spectrum has not been computed. 1 = the reference star spectrum has not been computed; 0 = the reference star spectrum was computed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_flag">
+    <cd:Integer>
+      <cd:Description>PCD flag indicating that the SATU data have been used for flat field correction. 1 = the SATU data are used; 0 = the SATU data are not used.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_charge_flag">
+    <cd:Integer>
+      <cd:Description>PCD flag for the dark charge computation (photometers). 1 = no DC correction performed; 0 = DC correction performed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_sp_err">
+    <cd:Integer>
+      <cd:Description>Number of source packets containing errors</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lev0_id">
+    <cd:Integer>
+      <cd:Description>Level 0 PCD. 0 = Standard occultation; 1 = first part of a tangent occultation; 2 = last part of a tangent occultation.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="atm_type">
+    <cd:Integer>
+      <cd:Description>Type of atmosphere file used. 50 = ECMWF file used; 100 = ECMWF file not up-to-date; 200 = MSIS90 used; other = no convergence in the iterative process.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dark_charge_info">
+    <cd:Integer>
+      <cd:Description>Dark Charge correction information. 0 = dark charge map used; 1 = first measurements used; 2 = no dark charge correction applied; 11 = first measurements not available - no DC corrections applied; 12 = first measurements not available and missing first packet - DC correction with DC maps without temperature dependence.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="limb_flag">
+    <cd:Integer>
+      <cd:Description>Dark/bright limb condition.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sdp_extract">
+    <cd:Integer>
+      <cd:Description>SDP extraction processing. Number of invalid measurements during the occultation. This value will be equal to the number of Transmission MDSRs with their quality flag set to -1 plus the number of missing source packets which were found.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dat_err">
+    <cd:Integer>
+      <cd:Description>Datation errors. Number of measurements where flags were raised to indicate a datation problem occurred.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="rt_err">
+    <cd:Integer>
+      <cd:Description>Ray Tracing errors. Number of measurements with a non-converged ray path.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="geo_err">
+    <cd:Integer>
+      <cd:Description>Geolocation errors. Number of measurements performed outside the atmosphere, set to 1000 if completely performed outside the atmosphere.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sat_err">
+    <cd:Integer>
+      <cd:Description>Saturation errors. Number of measurements containing saturated samples.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="cr_err">
+    <cd:Integer>
+      <cd:Description>Cosmic ray errors. Number of measurements where cosmic rays have been detected.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vign_err">
+    <cd:Integer>
+      <cd:Description>Vignetting correction. Number of measurements where the vignetting correction was applied.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_cent_back">
+    <cd:Integer>
+      <cd:Description>Central Background. Number of measurements where FLAG[bg](f) has been raised.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_flat">
+    <cd:Integer>
+      <cd:Description>Flat field correction. Number of measurements where the star falls outside the central band.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_full_trans_err">
+    <cd:Integer>
+      <cd:Description>Full transmission errors. Number of measurements where a problem has been detected during the full transmission computation.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_bad">
+    <cd:Integer>
+      <cd:Description>Bad pixels. Number of bad pixels per measurement.</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_fp_sat">
+    <cd:Array>
+      <cd:Description>Photometer saturation. Number of photometers saturated samples. First number is for photometer 1 second is for photometer 2.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>256</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="lev_1b_check">
+    <cd:Integer>
+      <cd:Description>Level 1B PCD check. 0 = no unrecoverable errors detected in Level 1B PCD; 1 = no valid data; 2 = second part of a tangent occultation; 3 = geolocation is not valid; 4 = reference star spectra is missing.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfcr">
+    <cd:Integer>
+      <cd:Description>Chromatic refraction mode for the measured transmission. 0 = no correction; 1 = correction is performed.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfcr20">
+    <cd:Integer>
+      <cd:Description>Chromatic refraction mode for transmission model (second spectral inversion). 0 = no correction; 1 = correction is performed.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfcr21">
+    <cd:Integer>
+      <cd:Description>Chromatic refraction mode for transmission model (third and further spectral inversions). 0 = no correction; 1 = correction is performed.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfi0">
+    <cd:Integer>
+      <cd:Description>Instrument function mode for transmission model (second spectral inversion). 0 = no correction; 1 = correction is performed.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfi1">
+    <cd:Integer>
+      <cd:Description>Instrument function mode for transmission model (third and further spectral inversions). 0 = no correction; 1 = correction is performed.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfv">
+    <cd:Integer>
+      <cd:Description>Vertical inversion mode. 0 = onion peeling; 1 = cubic spline approximation.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfs">
+    <cd:Integer>
+      <cd:Description>Smoothing mode (after the spectral inversion). 0 = no smoothing; 1 = cubic spline smoothing.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nft0">
+    <cd:Integer>
+      <cd:Description>Time mode for transmission model (second spectral inversion). 0 = zero order term; 1 = second order term.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nft1">
+    <cd:Integer>
+      <cd:Description>Time mode for transmission model (third and further spectral inversions). 0 = zero order term; 1 = second order term.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_iter_main">
+    <cd:Integer>
+      <cd:Description>Number of iterations for main loop</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_iter_inv">
+    <cd:Integer>
+      <cd:Description>Number of iterations for inversion loop</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_prof_points">
+    <cd:Integer>
+      <cd:Description>Number of points in profile column densities where Chi^2 &gt; Chi^2 (warn)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_air_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for air column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_aero_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for aerosol column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_o3_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for O3 column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_no2_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for NO2 column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_no3_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for NO3 column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_oclo_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for OClO column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_o2_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for O2 column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_h2o_col_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for H2O column densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="num_air_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for air local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_aero_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for aerosol local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_o3_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for O3 local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_no2_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for NO2 local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_no3_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for NO3 local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_oclo_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for OClO local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_o2_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for O2 local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_h2o_loc_flags">
+    <cd:Integer>
+      <cd:Description>Number of flagged points in profile for H2O local densities</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="layer_ratio">
+    <cd:Integer>
+      <cd:Description>Layer ratio used in vertical inversion</cd:Description>
+      <cd:Unit>1e3</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit/>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

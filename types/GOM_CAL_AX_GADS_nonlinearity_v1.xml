@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_GADS_nonlinearity_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="spa_gain">
+    <cd:Array>
+      <cd:Description>Spectrometer A electronic chain gain.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 e/ADU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>e/ADU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_gain">
+    <cd:Array>
+      <cd:Description>Spectrometer B electronic chain gain.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 e/ADU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>e/ADU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp_gain">
+    <cd:Array>
+      <cd:Description>Photometers electronic chain gain dimension.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 e/ADU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>e/ADU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_adc_off">
+    <cd:Array>
+      <cd:Description>ADC offsets for the spectrometers.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 ADU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>ADU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp_adc_off">
+    <cd:Array>
+      <cd:Description>ADC offset for the photometers</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 ADU</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>ADU</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd1_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for SPA CCD 1.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd2_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for SPA CCD 2.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd1_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for SPB CCD 1.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd2_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for SPB CCD 2.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp1_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for FP1.</cd:Description>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp2_lut">
+    <cd:Array>
+      <cd:Description>Non-linearity look-up table for FP2.</cd:Description>
+      <cd:Dimension>4096</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_det_off">
+    <cd:Array>
+      <cd:Description>Detection chain offset for the spectrometers</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp_det_off">
+    <cd:Array>
+      <cd:Description>Detection chain offset for the fast photometers</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>256</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

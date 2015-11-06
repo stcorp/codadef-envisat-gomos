@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_EXT_2P_MDSR_residual_extinction_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="trans">
+    <cd:Array>
+      <cd:Description>Transmission corrected for scintillation and dilution effects</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Float>
+        <cd:Unit/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="trans_model">
+    <cd:Array>
+      <cd:Description>Transmission model function</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Conversion numerator="1.000000" denominator="65535.000000">
+          <cd:Unit/>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Text format="ascii">
+      <cd:Description>Spare</cd:Description>
+      <cd:ByteSize>64</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

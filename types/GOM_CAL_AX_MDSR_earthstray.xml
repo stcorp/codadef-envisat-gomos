@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_MDSR_earthstray" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (set to -1 if all values in MDSR are zero, set to 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude">
+    <cd:Float>
+      <cd:Description>Altitude</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spa_ccd1_stray">
+    <cd:Array>
+      <cd:Description>Reduced external Earth straylight map for SPA CCD 1</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd2_stray">
+    <cd:Array>
+      <cd:Description>Reduced external Earth straylight map for SPA CCD 2</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd1_stray">
+    <cd:Array>
+      <cd:Description>Reduced external Earth straylight map for SPB CCD 1</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd2_stray">
+    <cd:Array>
+      <cd:Description>Reduced external Earth straylight map for SPB CCD 2</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp1_stray">
+    <cd:Array>
+      <cd:Description>Full external Earth straylight map for FP1</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp2_stray">
+    <cd:Array>
+      <cd:Description>Full external Earth straylight map for FP2</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

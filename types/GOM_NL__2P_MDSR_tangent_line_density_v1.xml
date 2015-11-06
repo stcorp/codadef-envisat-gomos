@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__2P_MDSR_tangent_line_density_v1" last-modified="2012-10-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="o3">
+    <cd:Float>
+      <cd:Description>Tangent line density for O3</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="o3_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for O3 tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no2">
+    <cd:Float>
+      <cd:Description>Tangent line density for NO2</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="no2_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for NO2 tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="no3">
+    <cd:Float>
+      <cd:Description>Tangent line density for NO3</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="no3_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for NO3 tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="air">
+    <cd:Float>
+      <cd:Description>Tangent line density for air</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for air tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="o2">
+    <cd:Float>
+      <cd:Description>Tangent line density for O2</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="o2_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for O2 tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="h2o">
+    <cd:Float>
+      <cd:Description>Tangent line density for H2O</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="h2o_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for H2O tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.05 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="oclo">
+    <cd:Float>
+      <cd:Description>Tangent line density for OClO</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="oclo_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation for OClO tangent line density. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>0.005 lg(re 1 cm^-2)</cd:Unit>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_iter">
+    <cd:Integer>
+      <cd:Description>Number of iterations in the spectral inversion</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pcd">
+    <cd:Array>
+      <cd:Description>PCD summary. Contains the PCD for the species in the following order: O3, NO2, NO3, air, O2, H2O, OClO. 0 = valid local density value; other = non-valid local density value.</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>96</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

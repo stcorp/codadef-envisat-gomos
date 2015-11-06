@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_STS_AX_GADS_star" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="size">
+    <cd:Integer>
+      <cd:Description>Size of the spectra</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavelength">
+    <cd:Array>
+      <cd:Description>Wavelength assignment of the star spectra</cd:Description>
+      <cd:Dimension>3000</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

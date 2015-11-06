@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAT_AX_GADS_annotation" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_star_catalogues">
+    <cd:Integer>
+      <cd:Description>number of input star catalogues</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="star_catalogue_filenames">
+    <cd:Array format="ascii">
+      <cd:Description>Filenames of input star catalogue</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Text>
+        <cd:ByteSize>32</cd:ByteSize>
+        <cd:NativeType>string</cd:NativeType>
+      </cd:Text>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="dark_areas_filename">
+    <cd:Text format="ascii">
+      <cd:Description>Filename of the dark areas list</cd:Description>
+      <cd:ByteSize>32</cd:ByteSize>
+      <cd:NativeType>string</cd:NativeType>
+    </cd:Text>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="tracking_temp_min">
+    <cd:Float>
+      <cd:Description>Minimum temperature for tracking</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="tracking_temp_max">
+    <cd:Float>
+      <cd:Description>Maximum temperature for tracking</cd:Description>
+      <cd:Unit>K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="magnitude_thresh_min_temp">
+    <cd:Float>
+      <cd:Description>Magnitude threshold for minimum temperature (red stars)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="magnitude_thresh_max_temp">
+    <cd:Float>
+      <cd:Description>Magnitude threshold for maximum temperature (blue stars)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="double_star_angle">
+    <cd:Float>
+      <cd:Description>Maximum angular separation under which a 'double' star is considered as one target by the star detector</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mag_difference_outer_cone">
+    <cd:Float>
+      <cd:Description>Magnitude difference between 2 stars to identify a 'single' or a 'multiple' (outer cone)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="distance_outer_cone">
+    <cd:Float>
+      <cd:Description>Distance between 2 stars to identify a 'single' or a 'multiple' (outer cone)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="mag_difference_inner_cone">
+    <cd:Float>
+      <cd:Description>Magnitude difference between 2 stars to identify a 'single' or a 'multiple' (inner cone)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="distance_inner_cone">
+    <cd:Float>
+      <cd:Description>Distance between 2 stars to identify a 'single' or a 'multiple' (inner cone)</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_brightness_variability">
+    <cd:Float>
+      <cd:Description>Maximum brightness variability for a star to be in the GOMOS star catalogue</cd:Description>
+      <cd:Unit>%</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_variability_period">
+    <cd:Float>
+      <cd:Description>Period for maximum variability for a star to be in the GOMOS star catalogue</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="dark_areas_mag_limit">
+    <cd:Float>
+      <cd:Description>Magnitude detection limit for dark areas</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="dark_areas_fov_radius">
+    <cd:Float>
+      <cd:Description>FOV detection cone for dark areas</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="star_mag_limit">
+    <cd:Float>
+      <cd:Description>Magnitude detection limit for single/double stars</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

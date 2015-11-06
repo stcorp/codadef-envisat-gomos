@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="ENVISAT_GOMOS" last-modified="2012-10-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>ENVISAT GOMOS products</cd:Description>
+  <cd:ProductType name="GOM_NL__0P">
+    <cd:Description>GOMOS Nominal Level 0</cd:Description>
+    <cd:ProductDefinition id="GOM_NL__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__0P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_MM__0P">
+    <cd:Description>GOMOS Monitoring Modes Level 0</cd:Description>
+    <cd:ProductDefinition id="GOM_MM__0P" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_MM__0P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_TRA_1P">
+    <cd:Description>Geolocated Calibrated Transmission Spectra</cd:Description>
+    <cd:ProductDefinition id="GOM_TRA_1P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_TRA_1P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_TRA_1P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_TRA_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/K  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_LIM_1P">
+    <cd:Description>Geolocated Calibrated Background Spectra (Limb)</cd:Description>
+    <cd:ProductDefinition id="GOM_LIM_1P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_LIM_1P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_LIM_1P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_LIM_1P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/K  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_NL__2P">
+    <cd:Description>GOMOS Temperature and Atmospheric Constituents Profiles</cd:Description>
+    <cd:ProductDefinition id="GOM_NL__2P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_NL__2P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_NL__2P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_NL__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/K  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_EXT_2P">
+    <cd:Description>GOMOS Residual Extinction</cd:Description>
+    <cd:ProductDefinition id="GOM_EXT_2P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_EXT_2P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_EXT_2P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_EXT_2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/K  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_RR__2P">
+    <cd:Description>GOMOS Extracted Profiles for Meteo Users</cd:Description>
+    <cd:ProductDefinition id="GOM_RR__2P_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_RR__2P_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_RR__2P_v2" format="binary" version="2">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_RR__2P</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/K  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_INS_AX">
+    <cd:Description>Instrument Physical Characteristics</cd:Description>
+    <cd:ProductDefinition id="GOM_INS_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_INS_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_INS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_CAL_AX">
+    <cd:Description>Calibration Database</cd:Description>
+    <cd:ProductDefinition id="GOM_CAL_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_CAL_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAL_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_PR1_AX">
+    <cd:Description>Level 1b Processing Configuration</cd:Description>
+    <cd:ProductDefinition id="GOM_PR1_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_PR1_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR1_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_CAT_AX">
+    <cd:Description>Star Catalogue</cd:Description>
+    <cd:ProductDefinition id="GOM_CAT_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CAT_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_STS_AX">
+    <cd:Description>Stellar Spectra</cd:Description>
+    <cd:ProductDefinition id="GOM_STS_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_STS_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_STS_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_PR2_AX">
+    <cd:Description>Level 2 Processing Configuration</cd:Description>
+    <cd:ProductDefinition id="GOM_PR2_AX_v0" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">AA-BB-CCC-DD-EEEE_V/I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_5/1</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/C</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3G</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3H</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="GOM_PR2_AX_v1" format="binary" version="1">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-ACR-GS-0003_6/0</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS2009_10_3I</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_PR2_AX</cd:MatchData>
+        <cd:MatchData offset="95">PO-RS-MDA-GS-2009_3/J  </cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="GOM_CRS_AX">
+    <cd:Description>Cross-sections</cd:Description>
+    <cd:ProductDefinition id="GOM_CRS_AX" format="binary" version="0">
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">GOM_CRS_AX</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_MDSR_dark_charge_maps" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spa_ccd1_dcm">
+    <cd:Array>
+      <cd:Description>Spectrometer A CCD1 dark charge map at the thermistor reference temperature.</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd2_dcm">
+    <cd:Array>
+      <cd:Description>Spectrometer A CCD2 dark charge map at the thermistor reference temperature.</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd1_dcm">
+    <cd:Array>
+      <cd:Description>Spectrometer B CCD1 dark charge map at the thermistor reference temperature.</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd2_dcm">
+    <cd:Array>
+      <cd:Description>Spectrometer B CCD2 dark charge map at the thermistor reference temperature.</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd1_temp_var">
+    <cd:Array>
+      <cd:Description>Temperature variation which doubles the dark charge (SPA CCD 1)</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spa_ccd2_temp_var">
+    <cd:Array>
+      <cd:Description>Temperature variation which doubles the dark charge (SPA CCD 2)</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd1_temp_var">
+    <cd:Array>
+      <cd:Description>Temperature variation which doubles the dark charge (SPB CCD 1)</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spb_ccd2_temp_var">
+    <cd:Array>
+      <cd:Description>Temperature variation which doubles the dark charge (SPB CCD 2)</cd:Description>
+      <cd:Dimension>1353</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 K</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>K</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>256</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

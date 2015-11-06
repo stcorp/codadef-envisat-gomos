@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR2_AX_MDSR_convergence_criteria" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude">
+    <cd:Float>
+      <cd:Description>Altitude</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_air_main">
+    <cd:Float>
+      <cd:Description>Convergence criteria for Air in the main loop (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_air">
+    <cd:Float>
+      <cd:Description>Convergence criteria for Air (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_aero">
+    <cd:Float>
+      <cd:Description>Convergence criteria for Aerosols (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_o3">
+    <cd:Float>
+      <cd:Description>Convergence criteria for O3 (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_no2">
+    <cd:Float>
+      <cd:Description>Convergence criteria for NO2 (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_no3">
+    <cd:Float>
+      <cd:Description>Convergence criteria for NO3 (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_o2">
+    <cd:Float>
+      <cd:Description>Convergence criteria for O2 (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_h2o">
+    <cd:Float>
+      <cd:Description>Convergence criteria for H2O (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="crit_oclo">
+    <cd:Float>
+      <cd:Description>Convergence criteria for OClO (local density)</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="crit_chi2">
+    <cd:Float>
+      <cd:Description>Chi^2 criteria value (for LMA)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

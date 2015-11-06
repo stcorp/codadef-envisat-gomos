@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_GADS_reference_star_spectrum_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_spectra_used">
+    <cd:Array>
+      <cd:Description>Number of star spectra used for the computation of the reference star spectrum. One value for each of the CCDs.</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_star_spec">
+    <cd:Array>
+      <cd:Description>Reference star spectrum</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 e</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>e</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_star_spec_flags">
+    <cd:Array>
+      <cd:Description>Flags for the reference star spectrum</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

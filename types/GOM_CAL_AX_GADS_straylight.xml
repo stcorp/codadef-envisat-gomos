@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_GADS_straylight" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_ccd_regions">
+    <cd:Array>
+      <cd:Description>Number of CCD regions for the reduced straylight maps (spatial and spectral directions)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_col_in_region">
+    <cd:Array>
+      <cd:Description>Number of CCD columns per region</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="straylight_column_index">
+    <cd:Array>
+      <cd:Description>First column index for the reduced straylight maps</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="straylight_line_index">
+    <cd:Array>
+      <cd:Description>First line index for the reduced straylight maps</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_spa_ccd1">
+    <cd:Array>
+      <cd:Description>Reduced internal straylight map for SPA CCD 1</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_spa_ccd2">
+    <cd:Array>
+      <cd:Description>Reduced internal straylight map for SPA CCD 2</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_spb_ccd1">
+    <cd:Array>
+      <cd:Description>Reduced internal straylight map for SPB CCD 1</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_spb_ccd2">
+    <cd:Array>
+      <cd:Description>Reduced internal straylight map for SPB CCD 2</cd:Description>
+      <cd:Dimension>136</cd:Dimension>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_fp1">
+    <cd:Array>
+      <cd:Description>Full internal straylight map for FP1</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="stray_map_fp2">
+    <cd:Array>
+      <cd:Description>Full internal straylight map for FP2</cd:Description>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Dimension>14</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>80</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

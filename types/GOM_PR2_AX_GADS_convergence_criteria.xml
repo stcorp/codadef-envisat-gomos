@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR2_AX_GADS_convergence_criteria" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_alt">
+    <cd:Integer>
+      <cd:Description>Number of altitudes for all convergence criteria. The convergence criteria are provided on a number of discretised altitudes.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_iter_main">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for the main loop</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_iter_inv">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for the inversion process</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_iter_inv_spa">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for the spectral inversion of SPA</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_iter_lma">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for the spectral inversion of LMA</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_std_dev">
+    <cd:Float>
+      <cd:Description>Maximum for relative standard deviation evolution</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

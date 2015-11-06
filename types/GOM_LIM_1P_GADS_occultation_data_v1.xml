@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_LIM_1P_GADS_occultation_data_v1" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="num_points">
+    <cd:Array>
+      <cd:Description>Number of points of the spectra</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="size_rad_sens_curve_limb">
+    <cd:Integer>
+      <cd:Description>Size of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="abs_rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Abscissae of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Radiometric sensitivity curve (limb) (unit: lf/e)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_eff_sampl_time">
+    <cd:Float>
+      <cd:Description>Spectrometer effective sampling time.</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_shift_rt">
+    <cd:Float>
+      <cd:Description>Effective time shift for ray tracing / geolocation</cd:Description>
+      <cd:Unit>s</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="sun_coord">
+    <cd:Array>
+      <cd:Description>Sun coordinates in the geocentric equatorial inertial system.</cd:Description>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

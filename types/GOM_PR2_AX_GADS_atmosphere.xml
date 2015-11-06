@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR2_AX_GADS_atmosphere" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="acc_grav">
+    <cd:Float>
+      <cd:Description>Standard acceleration of gravity</cd:Description>
+      <cd:Unit>m/s2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_density">
+    <cd:Float>
+      <cd:Description>Air density in standard conditions of temperature and pressure (T=288K, P=reference pressure)</cd:Description>
+      <cd:Unit>kg/m3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="abs_ref_p">
+    <cd:Float>
+      <cd:Description>Absolute Reference pressure</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="avogadro">
+    <cd:Float>
+      <cd:Description>Avogadro number</cd:Description>
+      <cd:Unit>1/mole</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="uni_gas_const">
+    <cd:Float>
+      <cd:Description>Universal gas constant</cd:Description>
+      <cd:Unit>J/mole/K</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="weight_dry_air">
+    <cd:Float>
+      <cd:Description>Molecular weight of the dry air</cd:Description>
+      <cd:Unit>kg/mole</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="o2_cont">
+    <cd:Float>
+      <cd:Description>O2 contribution to air density</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="press_top">
+    <cd:Float>
+      <cd:Description>Pressure at the top of the atmosphere</cd:Description>
+      <cd:Unit>Pa</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="lim_val">
+    <cd:Float>
+      <cd:Description>Limit value for the relative variation of density</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_iter">
+    <cd:Integer>
+      <cd:Description>Maximum number of iteration for the iterative process</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_source">
+    <cd:Integer>
+      <cd:Description>Number of GOMOS source data (used in GAP)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="act_flag">
+    <cd:Array>
+      <cd:Description>Activation flag for GOMOS source data (used in GAP)</cd:Description>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="weight_fact">
+    <cd:Float>
+      <cd:Description>Weighting factor on O2 data (used in GAP)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>512</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

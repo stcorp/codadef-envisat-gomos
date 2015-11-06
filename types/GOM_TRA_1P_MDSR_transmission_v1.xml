@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_MDSR_transmission_v1" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="trans_spectra">
+    <cd:Array>
+      <cd:Description>Full transmission spectra</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Float>
+        <cd:Unit/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="cov">
+    <cd:Array>
+      <cd:Description>Covariance function of the full transmission</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Float>
+        <cd:Unit/>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="scaled_back">
+    <cd:Array>
+      <cd:Description>Scaled estimated central background</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="error_back">
+    <cd:Array>
+      <cd:Description>Error bar for the estimated central background</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp1_data">
+    <cd:Array>
+      <cd:Description>Photometers engineering data (FP1)</cd:Description>
+      <cd:Dimension>500</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp2_data">
+    <cd:Array>
+      <cd:Description>Photometers engineering data (FP2)</cd:Description>
+      <cd:Dimension>500</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>e</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_fp1">
+    <cd:Array>
+      <cd:Description>Error bar for the photometers engineering data (FP1)</cd:Description>
+      <cd:Dimension>50</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="err_fp2">
+    <cd:Array>
+      <cd:Description>Error bar for the photometers engineering data (FP2)</cd:Description>
+      <cd:Dimension>50</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcd_spec">
+    <cd:Array>
+      <cd:Description>PCD at sample level (SP) for the spectrometers. Each unsigned short integer is composed of the following bit flags: bit 0: FL_sat(k,L,f) - saturation flag for the lower band (0 = no saturation; 1 = saturated); bit 1: FL_sat(k,C,f) - saturation flag for the central band (0 = no saturation; 1 = saturated); bit 2: FL_sat(k,U,f) - saturation flag for the upper band (0 = no saturation; 1 = saturated); bit 3: FL_bad(k,L) - bad pixel flag for the lower band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 4: FL_bad(k,C) - bad pixel flag for the central band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 5: FL_bad(k,U) - bad pixel flag for the upper band (0 = no bad pixel in the sample; 1 = at least one bad pixel); bit 6: FL_cr(k,L,f) - cosmic ray detection for lower band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 7: Fl_cr(k,C,f) - cosmic ray detection for the central band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 8: FL_cr(k,U,f) - cosmic ray detection for the upper band (0 = no cosmic ray detected in the sample; 1 = one cosmic ray in the sample); bit 9-10: FL_bg(k,f) - background data flag (0 = central background computed with no flagged sample; 1 = less than 25% flagged samples; 2 = less than 50% flagged samples; 3 = more than 50% flagged samples); bit 11-12: FL_ft(k,f) - full transmission computation (0 = no problems identified; 1 = reference star spectrum value is zero; 2 = one of the spatial bands is flagged for saturation); bit 13: FL_off(k) - pixel is in an invalid spectral range (0 = pixel is in a valid range; 1 = pixel is in an invalid spectral range); bit 14: FL_rsp(k,f) - pixel has been computed with flagged data during resampling process (0 = no problem; 1 = current data computed with flagged data); bit 15: Not used anymore.</cd:Description>
+      <cd:Dimension>2336</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcd_fp">
+    <cd:Array>
+      <cd:Description>PCD at sample level (FP) for the fast photometers. The first integer refers to photometer 1, the second to photometer 2. Each unsigned integer contains the following information: bit 0: FL^FP_sat(fc,f,fp) - photometers saturation flag (0 = no saturation; 1 = saturated sample); bit 1-15: not used.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

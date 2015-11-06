@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR2_AX_GADS_parameters_v0" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="nfcr">
+    <cd:Integer>
+      <cd:Description>Chromatic refraction mode for the measured transmission. 0 = no correction; 1 = correction performed.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfcr2">
+    <cd:Array>
+      <cd:Description>Chromatic refraction mode for transmission model. The first parameter is for the second spectral inversion and the second one is for the third and subsequent spectral inversions. 0 = no correction; 1 = correction performed.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nfi">
+    <cd:Array>
+      <cd:Description>Instrument function mode for the transmission model. The first parameter is for the second spectral inversion and the second one is for the third and subsequent spectral inversions. 0 = no correction; 1 = correction performed.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nfv">
+    <cd:Integer>
+      <cd:Description>Vertical inversion mode. 0 = not used; 1 = not used; 2 = linear interpolation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nfs">
+    <cd:Integer>
+      <cd:Description>Smoothing mode (after the spectral inversion). 0 = no smoothing; 1 = cubic spline smoothing.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nft">
+    <cd:Array>
+      <cd:Description>Time mode in the transmission model. The first parameter is for the second spectral inversion and the second one is for the third and subsequent spectral inversions. 0 = zero order term; 1 = second order term.</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="natm_b">
+    <cd:Integer>
+      <cd:Description>Choice of atmospheric model for SPB (O2 and H2O transmissions). 0 = US 76 standard; 1 = model dependent on season and latitude</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_obl">
+    <cd:Float>
+      <cd:Description>Maximum value of the occultation obliquity</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="id_earth">
+    <cd:Integer>
+      <cd:Description>Identifier of Earth model. 0: WGS84 model.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="f_e">
+    <cd:Float>
+      <cd:Description>Flattening of the Earth</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="a_e">
+    <cd:Integer>
+      <cd:Description>Earth equatorial radius</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="delta_h">
+    <cd:Float>
+      <cd:Description>Atmosphere thickness</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="max_dev">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for the deviation computation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="thr_dev">
+    <cd:Float>
+      <cd:Description>Threshold value for the ray deviation computation</cd:Description>
+      <cd:Unit>degrees</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="first_alt_rt">
+    <cd:Float>
+      <cd:Description>First altitude step for the ray tracing</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_step_rt">
+    <cd:Float>
+      <cd:Description>Altitude step for the ray tracing</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="alt_samp">
+    <cd:Float>
+      <cd:Description>Altitude sampling for density second derivative calculation</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_impact">
+    <cd:Integer>
+      <cd:Description>Maximum number of iterations for impact parameter computation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="prec_impact">
+    <cd:Float>
+      <cd:Description>Precision for impact parameter computation</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_wl_rt">
+    <cd:Integer>
+      <cd:Description>Minimum wavelength value for ray-tracing</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_wl_rt">
+    <cd:Integer>
+      <cd:Description>Maximum wavelength value for ray-tracing</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_3">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="alt_turb">
+    <cd:Array>
+      <cd:Description>Altitude range for turbulence fluctuations processing</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="corwin">
+    <cd:Float>
+      <cd:Description>Length of the cross-correlation window</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="spare_4">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>64</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="alt_ref">
+    <cd:Integer>
+      <cd:Description>Number of altitudes for reference line density. Working parameter used to decode the reference line density ADS.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="natm">
+    <cd:Integer>
+      <cd:Description>Choice of atmospheric model for SPA (reference line density). 0 = US 76 standard' 1 = model dependent on latitude and season.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="air_model">
+    <cd:Integer>
+      <cd:Description>Air reference line density computation model. 0 = 'compute from level-1B data'; 1 = 'use atmospheric model selected in preceding field'.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tot_species_a">
+    <cd:Integer>
+      <cd:Description>Total number of species for spectrometer A</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_groups_init_a">
+    <cd:Integer>
+      <cd:Description>Number of species groups (initialization phase)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_groups">
+    <cd:Integer>
+      <cd:Description>Number of species groups (spectral inversion phase)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_alt_win">
+    <cd:Integer>
+      <cd:Description>Number of altitudes for spectral windows</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="hanning_cut">
+    <cd:Float>
+      <cd:Description>Hanning filter cut-off frequency (half extent)</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="time_delay_comp">
+    <cd:Float>
+      <cd:Description>Time sampling for the time delay computation</cd:Description>
+      <cd:Unit>ms</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="air_density">
+    <cd:Float>
+      <cd:Description>Air number density at sea level</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="aero_model">
+    <cd:Integer>
+      <cd:Description>Aerosol model selection. 0 = '[1/lambda] model'; 1 = 'polynomial model'.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aero_model_order">
+    <cd:Integer>
+      <cd:Description>Order of the polynomial aerosol model</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="aerosol_mod">
+    <cd:Array>
+      <cd:Description>Aerosol model coefficients (unit: 1/cm3, -)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="doas_size">
+    <cd:Integer>
+      <cd:Description>DOAS sliding window size in pixels</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="max_chi2">
+    <cd:Float>
+      <cd:Description>Maximum value of Chi^2 before a warning flag is raised</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="num_zones_gop">
+    <cd:Array>
+      <cd:Description>Number of atmosphere zones per gas for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_air_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for air for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_aero_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for aerosol for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_o3_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for O3 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_no2_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for NO2 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_no3_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for NO3 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_o2_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for O2 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_h2o_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for H2O for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_oclo_gop">
+    <cd:Array>
+      <cd:Description>Number of acquisitions per layer for OClO for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_5">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>160</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="turbulence_params">
+    <cd:Record>
+      <cd:Description>Turbulence parameters</cd:Description>
+      <cd:Field name="kappa">
+        <cd:Float>
+          <cd:Description>Threshold value on fluctuations level for turbulent computation</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="dt1">
+        <cd:Float>
+          <cd:Description>Window width for correlation computation</cd:Description>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="dtmin">
+        <cd:Float>
+          <cd:Description>Minimum value for time delay to compute meaningful refractivity</cd:Description>
+          <cd:Unit>ms</cd:Unit>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="unused_parameters">
+        <cd:Array>
+          <cd:Description>Unused Parameters</cd:Description>
+          <cd:Dimension>7</cd:Dimension>
+          <cd:Float>
+            <cd:BitSize>32</cd:BitSize>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="low_aero_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for aerosol for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_o3_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for O3 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_no2_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for NO2 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_no3_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for NO3 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_o2_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for O2 for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_h2o_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for H2O for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="low_oclo_gop">
+    <cd:Array>
+      <cd:Description>Lower altitude for OClO for GOP</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>m</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_6">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>640</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="neg_density_flag">
+    <cd:Integer>
+      <cd:Description>Flag for negative densities in LMA. 0 = no; 1 = yes.</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="photo_flag">
+    <cd:Integer>
+      <cd:Description>Photometer flag. 0 = blue; 1 = red (scintillation processing).</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="min_trans">
+    <cd:Float>
+      <cd:Description>Minimum value for transmission terms</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_trans">
+    <cd:Float>
+      <cd:Description>Maximum value for transmission terms</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_ot">
+    <cd:Float>
+      <cd:Description>Minimum value for optical thickness</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_ot">
+    <cd:Float>
+      <cd:Description>Maximum value for optical thickness</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_col_den">
+    <cd:Float>
+      <cd:Description>Minimum value for tangent line densities</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_col_den">
+    <cd:Float>
+      <cd:Description>Maximum value for tangent line densities</cd:Description>
+      <cd:Unit>1/cm2</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="min_loc_den">
+    <cd:Float>
+      <cd:Description>Minimum value for local densities</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_loc_den">
+    <cd:Float>
+      <cd:Description>Maximum value for local densities</cd:Description>
+      <cd:Unit>1/cm3</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="max_alt_h2o">
+    <cd:Float>
+      <cd:Description>Maximum altitude for H2O retrieval</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="scale_factor_spectral">
+    <cd:Integer>
+      <cd:Description>Scale factor (spectral inversion) for the elements of the covariance matrix written in the level 2 product. The covariance matrix terms are divided by 10^FS before being written into the product.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="scale_factor_vertical">
+    <cd:Integer>
+      <cd:Description>Scale factor (vertical inversion) for the elements of the covariance matrix written in the level 2 product. The covariance matrix terms are divided by 10^FVM before being written into the product.</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_7">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>128</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

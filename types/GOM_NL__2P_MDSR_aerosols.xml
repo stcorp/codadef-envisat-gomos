@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_NL__2P_MDSR_aerosols" last-modified="2012-10-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Start time of the Data Set Record</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="local_ext">
+    <cd:Float>
+      <cd:Description>Extinction coefficient</cd:Description>
+      <cd:Unit>1/km</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="local_ext_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of the extinction coefficient. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>1e-1 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavlen_dep">
+    <cd:Array>
+      <cd:Description>Spectral parameters of the extinction coefficients</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="wavlen_dep_std">
+    <cd:Array>
+      <cd:Description>Standard deviation of the spectral parameters of the extinction coefficients. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tangent_ext">
+    <cd:Float>
+      <cd:Description>Tangent integrated extinction profile</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="tangent_ext_std">
+    <cd:Integer>
+      <cd:Description>Standard deviation of the tangent integrated extinction profile. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Unit>1e-1 %</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavelen_para">
+    <cd:Array>
+      <cd:Description>Spectral parameters of the tangent integrated extinction profile</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="wavelen_para_std">
+    <cd:Array>
+      <cd:Description>Standard deviation of the spectral parameters of the  integrated extinction profile. A value of 65535 indicates the value is invalid.</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-1 %</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10.000000">
+          <cd:Unit>%</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="pcd">
+    <cd:Array>
+      <cd:Description>PCD summary. The PCD summary provides the spectral and vertical PCD (first and sixth values) of the extinction coefficient at the reference wavelength, the other values are set to 0.</cd:Description>
+      <cd:Dimension>12</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

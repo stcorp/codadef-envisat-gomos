@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_TRA_1P_GADS_reference_atm_density_profile_v0" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="ref_atm_size">
+    <cd:Integer>
+      <cd:Description>Size of the reference atmospheric profile</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_alt">
+    <cd:Integer>
+      <cd:Description>First altitude of the profile</cd:Description>
+      <cd:Unit>1e-1 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="alt_step">
+    <cd:Integer>
+      <cd:Description>Altitude discretisation</cd:Description>
+      <cd:Unit>1e-1 m</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="10.000000">
+        <cd:Unit>m</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_profile">
+    <cd:Array>
+      <cd:Description>Reference atmospheric density profile</cd:Description>
+      <cd:Dimension>101</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm3</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>48</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

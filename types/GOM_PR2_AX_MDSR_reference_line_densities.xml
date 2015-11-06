@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_PR2_AX_MDSR_reference_line_densities" last-modified="2010-08-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Creation time of the DSR</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="altitude">
+    <cd:Float>
+      <cd:Description>Altitude</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>float</cd:NativeType>
+    </cd:Float>
+  </cd:Field>
+  <cd:Field name="ref_air">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for Air</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_aero">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for Aerosols</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_o3">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for O3</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_no2">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for NO2</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_no3">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for NO3</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_o2">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for O2</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_h2o">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for H2O</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ref_iclo">
+    <cd:Array>
+      <cd:Description>Reference tangent line density for OClO</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>1/cm2</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>384</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

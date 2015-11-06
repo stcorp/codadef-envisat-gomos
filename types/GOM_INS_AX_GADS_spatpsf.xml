@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_INS_AX_GADS_spatpsf" last-modified="2008-07-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="ref_wav_num">
+    <cd:Integer>
+      <cd:Description>Number of reference wavelengths for the static spatial PSF</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ref_wav">
+    <cd:Array>
+      <cd:Description>Reference wavelengths of the static spatial PSF</cd:Description>
+      <cd:Dimension>15</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_points">
+    <cd:Integer>
+      <cd:Description>Number of points for the static spatial PSF</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="step_size">
+    <cd:Integer>
+      <cd:Description>Discretisation step of the static spatial PSF</cd:Description>
+      <cd:Unit>1e-3 micrometers</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>micrometers</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spatial_psf">
+    <cd:Array>
+      <cd:Description>Static spatial PSF values</cd:Description>
+      <cd:Dimension>450</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

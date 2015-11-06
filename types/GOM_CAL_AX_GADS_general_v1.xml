@@ -1,0 +1,694 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="GOM_CAL_AX_GADS_general_v1" last-modified="2010-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Validity duration of the Calibration database</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="first_col_used">
+    <cd:Array>
+      <cd:Description>First used column on the CCD array for SPA and SPB</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_col_used">
+    <cd:Array>
+      <cd:Description>Number of used columns for the CCD arrays of SPA and SPB</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="first_line_used">
+    <cd:Array>
+      <cd:Description>First used lines of the CCD arrays</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_lines_back">
+    <cd:Array>
+      <cd:Description>Number of lines of the background bands</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_lines_iso">
+    <cd:Array>
+      <cd:Description>Number of lines of the isolation bands</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_lines_tar">
+    <cd:Array>
+      <cd:Description>Number of lines of the target bands</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="first_col_used_fp1">
+    <cd:Integer>
+      <cd:Description>First used column of the FP1 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_col_used_fp1">
+    <cd:Integer>
+      <cd:Description>Last used column of the FP1 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_col_used_fp2">
+    <cd:Integer>
+      <cd:Description>First used column of the FP2 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_col_used_fp2">
+    <cd:Integer>
+      <cd:Description>Last used column of the FP2 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_line_used_fp1">
+    <cd:Integer>
+      <cd:Description>First used line of the FP1 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_line_used_fp1">
+    <cd:Integer>
+      <cd:Description>Last used line of the FP1 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="first_line_used_fp2">
+    <cd:Integer>
+      <cd:Description>First used line of the FP2 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="last_line_used_fp2">
+    <cd:Integer>
+      <cd:Description>Last used line of the FP2 CCD array</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="nom_wavelen_assignment_col">
+    <cd:Array>
+      <cd:Description>Column index for the nominal wavelength assignment</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nom_wavelen_assignment">
+    <cd:Array>
+      <cd:Description>Nominal wavelength assignment of one CCD column</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="axis_len_x">
+    <cd:Integer>
+      <cd:Description>Star spot semi axis length in the X axis frame of the FP CCD array</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="axis_len_y">
+    <cd:Integer>
+      <cd:Description>Star spot semi axis length in the Y axis frame of the FP CCD array</cd:Description>
+      <cd:Unit>nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="size_lut_star_spectrum">
+    <cd:Array>
+      <cd:Description>Size of the LUT giving the star spectrum location on the CCD arrays</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ccd_columns_star_spectrum">
+    <cd:Array>
+      <cd:Description>CCD columns for the specification of the star location on the CCD arrays</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="ccd_lines_star_spectrum">
+    <cd:Array>
+      <cd:Description>CCD lines for the specification of the star location on the CCD arrays (unit: lf/e)</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nom_col_cen">
+    <cd:Array>
+      <cd:Description>Nominal CCD column of the star spot center (FP)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="nom_line_cen">
+    <cd:Array>
+      <cd:Description>Nominal CCD line of the star spot center (FP)</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lowest_col_wavelen_spa_ccd1">
+    <cd:Integer>
+      <cd:Description>Wavelength assignment of the lowest used CCD column for SPA CCD1</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lowest_col_wavelen_spa_ccd2">
+    <cd:Integer>
+      <cd:Description>Wavelength assignment of the lowest used CCD column for SPA CCD2</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lowest_col_wavelen_spb_ccd1">
+    <cd:Integer>
+      <cd:Description>Wavelength assignment of the lowest used CCD column for SPB CCD1</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lowest_col_wavelen_spb_ccd2">
+    <cd:Integer>
+      <cd:Description>Wavelength assignment of the lowest used CCD column for SPB CCD2</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spec_disp_lut_size">
+    <cd:Integer>
+      <cd:Description>Size of the spectral dispersion LUT</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="wavelength_lut">
+    <cd:Array>
+      <cd:Description>Wavelength values for the spectral dispersion LUT</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spec_disp">
+    <cd:Array>
+      <cd:Description>Spectral dispersion of the spectrometers as a function of the wavelength LUT</cd:Description>
+      <cd:Dimension>30</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm/mm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm/mm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lower_wl_fp1">
+    <cd:Integer>
+      <cd:Description>Lower wavelength of the band of FP1</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="higher_wl_fp1">
+    <cd:Integer>
+      <cd:Description>Higher wavelength of the band of FP1</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lower_wl_fp2">
+    <cd:Integer>
+      <cd:Description>Lower wavelength of the band of FP2</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="higher_wl_fp2">
+    <cd:Integer>
+      <cd:Description>Higher wavelength of the band of FP2</cd:Description>
+      <cd:Unit>1e-3 nm</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>nm</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fp_trans_curve_size">
+    <cd:Array>
+      <cd:Description>Size of the FP transmission curves</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="wavelen_fp_trans_curve">
+    <cd:Array>
+      <cd:Description>Wavelengths of the FP transmission curves</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="fp_trans_curve">
+    <cd:Array>
+      <cd:Description>FP transmission curves</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>32</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>%</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="slit_lut_size">
+    <cd:Integer>
+      <cd:Description>Size of the slit  transmission factor LUT</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slit_angles">
+    <cd:Array>
+      <cd:Description>Angles for the slit transmission LUT</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="slit_factors">
+    <cd:Array>
+      <cd:Description>Slit transmission factor LUT</cd:Description>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-4</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="10000.000000">
+          <cd:Unit/>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="conv_lut_size">
+    <cd:Array>
+      <cd:Description>Size of the LUT for the conversion between spectrometers and photometers samples</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spectral_grid">
+    <cd:Array>
+      <cd:Description>Spectral grid for the transformation between electrons received by the spectrometers and by the photometers</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="conv_factors">
+    <cd:Array>
+      <cd:Description>Transformation between electrons received by spectrometers and electrons received by photometers</cd:Description>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Dimension>10</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="size_rad_sens_curve_limb">
+    <cd:Integer>
+      <cd:Description>Size of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="abs_rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Abscissae of the radiometric sensitivity curve (limb)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rad_sens_curve_limb">
+    <cd:Array>
+      <cd:Description>Radiometric sensitivity curve (limb) (unit: lf/e)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Float>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="size_rad_sens_curve_star">
+    <cd:Integer>
+      <cd:Description>Size of the radiometric sensitivity curve (star)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="abs_rad_sens_curve_star">
+    <cd:Array>
+      <cd:Description>Abscissae of the radiometric sensitivity curve (star)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-3 nm</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>nm</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>uint32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rad_sens_curve_star">
+    <cd:Array>
+      <cd:Description>Radiometric sensitivity curve (star)</cd:Description>
+      <cd:Dimension>128</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>photons/(s.cm2.nm.e)</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rel_spect_orient">
+    <cd:Array>
+      <cd:Description>Relative spectral orientation of the CCD with respect to the column index</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="rel_orient_ccd_wrt_satu">
+    <cd:Array>
+      <cd:Description>Relative orientation of the CCD with respect to the SATU</cd:Description>
+      <cd:Dimension>6</cd:Dimension>
+      <cd:Dimension>2</cd:Dimension>
+      <cd:Integer>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>int8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_azimuth_angles">
+    <cd:Integer>
+      <cd:Description>Number of azimuth angles used to define the vignetting LUT</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="azimuth_angles_of_lut">
+    <cd:Array>
+      <cd:Description>Azimuth angles used to define the vignetting LUT</cd:Description>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_elev_angles_for_lut">
+    <cd:Integer>
+      <cd:Description>Number of elevation angles used to define the vignetting LUT</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="elevation_angles">
+    <cd:Array>
+      <cd:Description>Elevation angles used to define the vignetting LUT</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="vignetting_lut">
+    <cd:Array>
+      <cd:Description>Vignetting LUT</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Dimension>7</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>%</cd:Unit>
+        <cd:BitSize>8</cd:BitSize>
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_azimuth_ang_lut">
+    <cd:Integer>
+      <cd:Description>Number of azimuth angles for which a reflectivity LUT is specified</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="num_elevation_ang_lut">
+    <cd:Integer>
+      <cd:Description>Number of elevation angles for which a reflectivity LUT is specified</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="azimuth_ang_ref_lut">
+    <cd:Array>
+      <cd:Description>Azimuth angles for the reflectivity LUT</cd:Description>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="elev_ang_ref_lut">
+    <cd:Array>
+      <cd:Description>Elevation angles for the reflectivity LUT</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>degrees</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="size_reflect_lut">
+    <cd:Integer>
+      <cd:Description>Size of the reflectivity LUT</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="reflect_lut_wave">
+    <cd:Array>
+      <cd:Description>Wavelengths used to define the reflectivity LUT</cd:Description>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>nm</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="reflect_lut">
+    <cd:Array>
+      <cd:Description>Reflectivity LUT</cd:Description>
+      <cd:Dimension>5</cd:Dimension>
+      <cd:Dimension>16</cd:Dimension>
+      <cd:Dimension>64</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-2 %/degrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="100.000000">
+          <cd:Unit>%/degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="num_ins_meas_occ">
+    <cd:Integer>
+      <cd:Description>Number of instable measurements at the beginning of the occultation</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="satu_win_shift">
+    <cd:Integer>
+      <cd:Description>SATU window shift during the wavelength calibration</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="per_tot_star_signal">
+    <cd:Array>
+      <cd:Description>Percentage of total star signal on the central and background bands</cd:Description>
+      <cd:Dimension>4</cd:Dimension>
+      <cd:Dimension>3</cd:Dimension>
+      <cd:Float>
+        <cd:Unit>%</cd:Unit>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>float</cd:NativeType>
+      </cd:Float>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>456</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>
